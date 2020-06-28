@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://delta-1619khz.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-06-28T06:46:35.113Z</updated>
+    <updated>2020-06-28T14:04:28.160Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://delta-1619khz.github.io/"/>
     <link rel="self" href="https://delta-1619khz.github.io/atom.xml"/>
@@ -11,35 +11,697 @@
     <icon>https://delta-1619khz.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://delta-1619khz.github.io/post/hello-gridea</id>
-        <link href="https://delta-1619khz.github.io/post/hello-gridea">
+        <title type="html"><![CDATA[使用函数求余弦函数的近似值]]></title>
+        <id>https://delta-1619khz.github.io/post/shi-yong-han-shu-qiu-yu-xian-han-shu-de-jin-si-zhi</id>
+        <link href="https://delta-1619khz.github.io/post/shi-yong-han-shu-qiu-yu-xian-han-shu-de-jin-si-zhi">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <updated>2020-06-28T13:06:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>本题要求实现一个函数，用下列公式求cos(x)的近似值，精确到最后一项的绝对值小于e：</p>
+<p>cos(x)=x<sup>0/0!−x</sup>2/2!+x<sup>4/4!−x</sup>6/6!+⋯</p>
+<p>函数接口定义：<br>
+double funcos( double e, double x );<br>
+其中用户传入的参数为误差上限e和自变量x；函数funcos应返回用给定公式计算出来、并且满足误差要求的cos(x)的近似值。输入输出均在双精度范围内。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;<br>
+#include &lt;math.h&gt;</p>
+<p>double funcos( double e, double x );</p>
+<p>int main()<br>
+{<br>
+double e, x;</p>
+<pre><code>scanf(&quot;%lf %lf&quot;, &amp;e, &amp;x);
+printf(&quot;cos(%.2f) = %.6f\n&quot;, x, funcos(e, x));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+0.01 -3.14<br>
+输出样例：<br>
+cos(-3.14) = -0.999899</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<p>本题要求实现一个函数，用下列公式求cos(x)的近似值，精确到最后一项的绝对值小于e：</p>
+<p>cos(x)=x<sup>0/0!−x</sup>2/2!+x<sup>4/4!−x</sup>6/6!+⋯</p>
+<p>函数接口定义：<br>
+double funcos( double e, double x );<br>
+其中用户传入的参数为误差上限e和自变量x；函数funcos应返回用给定公式计算出来、并且满足误差要求的cos(x)的近似值。输入输出均在双精度范围内。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;<br>
+#include &lt;math.h&gt;</p>
+<p>double funcos( double e, double x );</p>
+<p>int main()<br>
+{<br>
+double e, x;</p>
+<pre><code>scanf(&quot;%lf %lf&quot;, &amp;e, &amp;x);
+printf(&quot;cos(%.2f) = %.6f\n&quot;, x, funcos(e, x));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+0.01 -3.14<br>
+输出样例：<br>
+cos(-3.14) = -0.999899</p>
 <!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<p>double funcos( double e, double x )<br>
+{<br>
+double sum=1, p1=1,p2=1;<br>
+int i,k=-1;<br>
+for (i=2;p1&gt;=e;i+=2)<br>
+{<br>
+p2=(x<em>x)/(i</em>(i-1));<br>
+sum+=k<em>p1</em>p2;<br>
+p1*=p2;<br>
+k=-k;<br>
+}<br>
+return sum;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用函数输出水仙花数]]></title>
+        <id>https://delta-1619khz.github.io/post/shi-yong-han-shu-shu-chu-shui-xian-hua-shu</id>
+        <link href="https://delta-1619khz.github.io/post/shi-yong-han-shu-shu-chu-shui-xian-hua-shu">
+        </link>
+        <updated>2020-06-28T09:39:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>水仙花数是指一个N位正整数（N≥3），它的每个位上的数字的N次幂之和等于它本身。例如：153=1<sup>3+5</sup>3+3^3​。 本题要求编写两个函数，一个判断给定整数是否水仙花数，另一个按从小到大的顺序打印出给定区间(m,n)内所有的水仙花数。</p>
+<p>函数接口定义：<br>
+int narcissistic( int number );<br>
+void PrintN( int m, int n );<br>
+函数narcissistic判断number是否为水仙花数，是则返回1，否则返回0。</p>
+<p>函数PrintN则打印开区间(m, n)内所有的水仙花数，每个数字占一行。题目保证100≤m≤n≤10000。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int narcissistic( int number );<br>
+void PrintN( int m, int n );</p>
+<p>int main()<br>
+{<br>
+int m, n;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
+if ( narcissistic(m) ) printf(&quot;%d is a narcissistic number\n&quot;, m);
+PrintN(m, n);
+if ( narcissistic(n) ) printf(&quot;%d is a narcissistic number\n&quot;, n);
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+153 400<br>
+输出样例：<br>
+153 is a narcissistic number<br>
+370<br>
+371</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>水仙花数是指一个N位正整数（N≥3），它的每个位上的数字的N次幂之和等于它本身。例如：153=1<sup>3+5</sup>3+3^3​。 本题要求编写两个函数，一个判断给定整数是否水仙花数，另一个按从小到大的顺序打印出给定区间(m,n)内所有的水仙花数。</p>
+<p>函数接口定义：<br>
+int narcissistic( int number );<br>
+void PrintN( int m, int n );<br>
+函数narcissistic判断number是否为水仙花数，是则返回1，否则返回0。</p>
+<p>函数PrintN则打印开区间(m, n)内所有的水仙花数，每个数字占一行。题目保证100≤m≤n≤10000。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int narcissistic( int number );<br>
+void PrintN( int m, int n );</p>
+<p>int main()<br>
+{<br>
+int m, n;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
+if ( narcissistic(m) ) printf(&quot;%d is a narcissistic number\n&quot;, m);
+PrintN(m, n);
+if ( narcissistic(n) ) printf(&quot;%d is a narcissistic number\n&quot;, n);
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+153 400<br>
+输出样例：<br>
+153 is a narcissistic number<br>
+370<br>
+371</p>
+<!-- more -->
+<p>int narcissistic( int number )<br>
+{<br>
+int num=number,n=0,t1=1,t2,i,sum=0;<br>
+while (num!=0)<br>
+{<br>
+num/=10;<br>
+n++;<br>
+}<br>
+num=number;<br>
+while (num!=0)<br>
+{<br>
+t2=num%10;<br>
+t1=1;<br>
+for (i=0;i&lt;n;i++) t1*=t2;<br>
+sum += t1;<br>
+num/=10;<br>
+}<br>
+if (sum==number) return 1;<br>
+else return 0;<br>
+}<br>
+void PrintN( int m, int n )<br>
+{<br>
+int i;<br>
+for (i=m+1;i&lt;n;i++)<br>
+if(narcissistic(i)) printf(&quot;%d\n&quot;,i);<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用函数统计指定数字的个数]]></title>
+        <id>https://delta-1619khz.github.io/post/shi-yong-han-shu-tong-ji-zhi-ding-shu-zi-de-ge-shu</id>
+        <link href="https://delta-1619khz.github.io/post/shi-yong-han-shu-tong-ji-zhi-ding-shu-zi-de-ge-shu">
+        </link>
+        <updated>2020-06-28T09:24:13.000Z</updated>
+        <summary type="html"><![CDATA[<p>本题要求实现一个统计整数中指定数字的个数的简单函数。</p>
+<p>函数接口定义：<br>
+int CountDigit( int number, int digit );<br>
+其中number是不超过长整型的整数，digit为[0, 9]区间内的整数。函数CountDigit应返回number中digit出现的次数。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int CountDigit( int number, int digit );</p>
+<p>int main()<br>
+{<br>
+int number, digit;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;number, &amp;digit);
+printf(&quot;Number of digit %d in %d: %d\n&quot;, digit, number, CountDigit(number, digit));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+-21252 2<br>
+输出样例：<br>
+Number of digit 2 in -21252: 3</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本题要求实现一个统计整数中指定数字的个数的简单函数。</p>
+<p>函数接口定义：<br>
+int CountDigit( int number, int digit );<br>
+其中number是不超过长整型的整数，digit为[0, 9]区间内的整数。函数CountDigit应返回number中digit出现的次数。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int CountDigit( int number, int digit );</p>
+<p>int main()<br>
+{<br>
+int number, digit;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;number, &amp;digit);
+printf(&quot;Number of digit %d in %d: %d\n&quot;, digit, number, CountDigit(number, digit));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+-21252 2<br>
+输出样例：<br>
+Number of digit 2 in -21252: 3</p>
+<!-- more -->
+<p>int CountDigit( int number, int digit )<br>
+{<br>
+int t=0;<br>
+if (number<mark>0&amp;&amp;digit</mark>0) return 1;<br>
+if (number&lt;0) number=-number;<br>
+for (;number&gt;0;number/=10)<br>
+if (number%10==digit) t++;<br>
+return t;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用函数求素数和]]></title>
+        <id>https://delta-1619khz.github.io/post/shi-yong-han-shu-qiu-su-shu-he</id>
+        <link href="https://delta-1619khz.github.io/post/shi-yong-han-shu-qiu-su-shu-he">
+        </link>
+        <updated>2020-06-28T08:24:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>本题要求实现一个判断素数的简单函数、以及利用该函数计算给定区间内素数和的函数。</p>
+<p>素数就是只能被1和自身整除的正整数。注意：1不是素数，2是素数。</p>
+<p>函数接口定义：<br>
+int prime( int p );<br>
+int PrimeSum( int m, int n );<br>
+其中函数prime当用户传入参数p为素数时返回1，否则返回0；函数PrimeSum返回区间[m, n]内所有素数的和。题目保证用户传入的参数m≤n。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;<br>
+#include &lt;math.h&gt;</p>
+<p>int prime( int p );<br>
+int PrimeSum( int m, int n );</p>
+<p>int main()<br>
+{<br>
+int m, n, p;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
+printf(&quot;Sum of ( &quot;);
+for( p=m; p&lt;=n; p++ ) {
+    if( prime(p) != 0 )
+        printf(&quot;%d &quot;, p);
+}
+printf(&quot;) = %d\n&quot;, PrimeSum(m, n));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+-1 10<br>
+输出样例：<br>
+Sum of ( 2 3 5 7 ) = 17</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本题要求实现一个判断素数的简单函数、以及利用该函数计算给定区间内素数和的函数。</p>
+<p>素数就是只能被1和自身整除的正整数。注意：1不是素数，2是素数。</p>
+<p>函数接口定义：<br>
+int prime( int p );<br>
+int PrimeSum( int m, int n );<br>
+其中函数prime当用户传入参数p为素数时返回1，否则返回0；函数PrimeSum返回区间[m, n]内所有素数的和。题目保证用户传入的参数m≤n。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;<br>
+#include &lt;math.h&gt;</p>
+<p>int prime( int p );<br>
+int PrimeSum( int m, int n );</p>
+<p>int main()<br>
+{<br>
+int m, n, p;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
+printf(&quot;Sum of ( &quot;);
+for( p=m; p&lt;=n; p++ ) {
+    if( prime(p) != 0 )
+        printf(&quot;%d &quot;, p);
+}
+printf(&quot;) = %d\n&quot;, PrimeSum(m, n));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+-1 10<br>
+输出样例：<br>
+Sum of ( 2 3 5 7 ) = 17</p>
+<!-- more -->
+<p>int prime( int p )<br>
+{<br>
+int i;<br>
+if (p&lt;=1) return 0;<br>
+for (i=2;i&lt;=sqrt(p);i++)<br>
+if (p%i==0) return 0;<br>
+return 1;<br>
+}<br>
+int PrimeSum( int m, int n)<br>
+{<br>
+int p=m, sum=0;<br>
+if (p&lt;=1) p=2;<br>
+for (;p&lt;=n;p++)<br>
+if (prime(p)!=0) sum+=p;<br>
+return sum;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用函数计算两点之间的距离]]></title>
+        <id>https://delta-1619khz.github.io/post/shi-yong-han-shu-ji-suan-liang-dian-zhi-jian-de-ju-chi</id>
+        <link href="https://delta-1619khz.github.io/post/shi-yong-han-shu-ji-suan-liang-dian-zhi-jian-de-ju-chi">
+        </link>
+        <updated>2020-06-28T08:19:08.000Z</updated>
+        <summary type="html"><![CDATA[<p>本题要求实现一个函数，对给定平面任意两点坐标(x1​​,y​1)和(x​2​,y​2)，求这两点之间的距离。</p>
+<p>函数接口定义：<br>
+double dist( double x1, double y1, double x2, double y2 );<br>
+其中用户传入的参数为平面上两个点的坐标(x1, y1)和(x2, y2)，函数dist应返回两点间的距离。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;<br>
+#include &lt;math.h&gt;</p>
+<p>double dist( double x1, double y1, double x2, double y2 );</p>
+<p>int main()<br>
+{<br>
+double x1, y1, x2, y2;</p>
+<pre><code>scanf(&quot;%lf %lf %lf %lf&quot;, &amp;x1, &amp;y1, &amp;x2, &amp;y2);
+printf(&quot;dist = %.2f\n&quot;, dist(x1, y1, x2, y2));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+10 10 200 100<br>
+输出样例：<br>
+dist = 210.24</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本题要求实现一个函数，对给定平面任意两点坐标(x1​​,y​1)和(x​2​,y​2)，求这两点之间的距离。</p>
+<p>函数接口定义：<br>
+double dist( double x1, double y1, double x2, double y2 );<br>
+其中用户传入的参数为平面上两个点的坐标(x1, y1)和(x2, y2)，函数dist应返回两点间的距离。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;<br>
+#include &lt;math.h&gt;</p>
+<p>double dist( double x1, double y1, double x2, double y2 );</p>
+<p>int main()<br>
+{<br>
+double x1, y1, x2, y2;</p>
+<pre><code>scanf(&quot;%lf %lf %lf %lf&quot;, &amp;x1, &amp;y1, &amp;x2, &amp;y2);
+printf(&quot;dist = %.2f\n&quot;, dist(x1, y1, x2, y2));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+10 10 200 100<br>
+输出样例：<br>
+dist = 210.24</p>
+<!-- more -->
+<p>double dist( double x1, double y1, double x2, double y2 )<br>
+{<br>
+return sqrt((x1-x2)<em>(x1-x2)+(y1-y2)</em>(y1-y2));<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用函数求奇数和]]></title>
+        <id>https://delta-1619khz.github.io/post/shi-yong-han-shu-qiu-qi-shu-he</id>
+        <link href="https://delta-1619khz.github.io/post/shi-yong-han-shu-qiu-qi-shu-he">
+        </link>
+        <updated>2020-06-28T07:15:34.000Z</updated>
+        <summary type="html"><![CDATA[<p>本题要求实现一个函数，计算N个整数中所有奇数的和，同时实现一个判断奇偶性的函数。</p>
+<p>函数接口定义：<br>
+int even( int n );<br>
+int OddSum( int List[], int N );<br>
+其中函数even将根据用户传入的参数n的奇偶性返回相应值：当n为偶数时返回1，否则返回0。函数OddSum负责计算并返回传入的N个整数List[]中所有奇数的和。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>#define MAXN 10</p>
+<p>int even( int n );<br>
+int OddSum( int List[], int N );</p>
+<p>int main()<br>
+{<br>
+int List[MAXN], N, i;</p>
+<pre><code>scanf(&quot;%d&quot;, &amp;N);
+printf(&quot;Sum of ( &quot;);//事实上，&quot;Sum of (&quot;在此处并不和样例一样
+for ( i=0; i&lt;N; i++ ) {
+    scanf(&quot;%d&quot;, &amp;List[i]);
+    if ( even(List[i])==0 )
+        printf(&quot;%d &quot;, List[i]);
+}
+printf(&quot;) = %d\n&quot;, OddSum(List, N));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+6<br>
+2 -3 7 88 0 15<br>
+输出样例：<br>
+Sum of ( -3 7 15 ) = 19</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本题要求实现一个函数，计算N个整数中所有奇数的和，同时实现一个判断奇偶性的函数。</p>
+<p>函数接口定义：<br>
+int even( int n );<br>
+int OddSum( int List[], int N );<br>
+其中函数even将根据用户传入的参数n的奇偶性返回相应值：当n为偶数时返回1，否则返回0。函数OddSum负责计算并返回传入的N个整数List[]中所有奇数的和。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>#define MAXN 10</p>
+<p>int even( int n );<br>
+int OddSum( int List[], int N );</p>
+<p>int main()<br>
+{<br>
+int List[MAXN], N, i;</p>
+<pre><code>scanf(&quot;%d&quot;, &amp;N);
+printf(&quot;Sum of ( &quot;);//事实上，&quot;Sum of (&quot;在此处并不和样例一样
+for ( i=0; i&lt;N; i++ ) {
+    scanf(&quot;%d&quot;, &amp;List[i]);
+    if ( even(List[i])==0 )
+        printf(&quot;%d &quot;, List[i]);
+}
+printf(&quot;) = %d\n&quot;, OddSum(List, N));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+6<br>
+2 -3 7 88 0 15<br>
+输出样例：<br>
+Sum of ( -3 7 15 ) = 19</p>
+<!-- more -->
+<p>int even( int n )<br>
+{<br>
+if(n%2==0) return 1;<br>
+else return 0;<br>
+}<br>
+int OddSum( int List[], int N )<br>
+{<br>
+int sum=0,i;<br>
+for(i=0;i&lt;N;i++)<br>
+if(even(List[i])==0) sum+=List[i];<br>
+return sum;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[符号函数]]></title>
+        <id>https://delta-1619khz.github.io/post/fu-hao-han-shu</id>
+        <link href="https://delta-1619khz.github.io/post/fu-hao-han-shu">
+        </link>
+        <updated>2020-06-28T07:12:46.000Z</updated>
+        <summary type="html"><![CDATA[<p>本题要求实现符号函数sign(x)。</p>
+<p>函数接口定义：<br>
+int sign( int x );<br>
+其中x是用户传入的整型参数。符号函数的定义为：若x大于0，sign(x) = 1；若x等于0，sign(x) = 0；否则，sign(x) = −1。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int sign( int x );</p>
+<p>int main()<br>
+{<br>
+int x;</p>
+<pre><code>scanf(&quot;%d&quot;, &amp;x);
+printf(&quot;sign(%d) = %d\n&quot;, x, sign(x));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+10<br>
+输出样例：<br>
+sign(10) = 1</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本题要求实现符号函数sign(x)。</p>
+<p>函数接口定义：<br>
+int sign( int x );<br>
+其中x是用户传入的整型参数。符号函数的定义为：若x大于0，sign(x) = 1；若x等于0，sign(x) = 0；否则，sign(x) = −1。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int sign( int x );</p>
+<p>int main()<br>
+{<br>
+int x;</p>
+<pre><code>scanf(&quot;%d&quot;, &amp;x);
+printf(&quot;sign(%d) = %d\n&quot;, x, sign(x));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+10<br>
+输出样例：<br>
+sign(10) = 1</p>
+<!-- more -->
+<p>int sign( int x )<br>
+{<br>
+if(x&gt;0) return 1;<br>
+else if(x==0) return 0;<br>
+else return -1;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数字金字塔]]></title>
+        <id>https://delta-1619khz.github.io/post/shu-zi-jin-zi-ta</id>
+        <link href="https://delta-1619khz.github.io/post/shu-zi-jin-zi-ta">
+        </link>
+        <updated>2020-06-28T06:59:18.000Z</updated>
+        <summary type="html"><![CDATA[<p>本题要求实现函数输出n行数字金字塔。</p>
+<p>函数接口定义：<br>
+void pyramid( int n );<br>
+其中n是用户传入的参数，为[1, 9]的正整数。要求函数按照如样例所示的格式打印出n行数字金字塔。注</p>
+<p>意每个数字后面跟一个空格。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>void pyramid( int n );</p>
+<p>int main()<br>
+{<br>
+int n;</p>
+<pre><code>scanf(&quot;%d&quot;, &amp;n);
+pyramid(n);
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+5<br>
+输出样例：<br>
+1<br>
+2 2<br>
+3 3 3<br>
+4 4 4 4<br>
+5 5 5 5 5</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本题要求实现函数输出n行数字金字塔。</p>
+<p>函数接口定义：<br>
+void pyramid( int n );<br>
+其中n是用户传入的参数，为[1, 9]的正整数。要求函数按照如样例所示的格式打印出n行数字金字塔。注</p>
+<p>意每个数字后面跟一个空格。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>void pyramid( int n );</p>
+<p>int main()<br>
+{<br>
+int n;</p>
+<pre><code>scanf(&quot;%d&quot;, &amp;n);
+pyramid(n);
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+5<br>
+输出样例：<br>
+1<br>
+2 2<br>
+3 3 3<br>
+4 4 4 4<br>
+5 5 5 5 5</p>
+<!-- more -->
+<p>void pyramid( int n )<br>
+{<br>
+int j,k;<br>
+for(j=0;j&lt;n;j++)<br>
+{<br>
+for(k=0;k&lt;n-j-1;k++) printf(&quot; &quot;);<br>
+for(k=0;k&lt;j+1;k++) printf(&quot;%d &quot;,j+1);<br>
+printf(&quot;\n&quot;);<br>
+}<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[找两个数中最大者]]></title>
+        <id>https://delta-1619khz.github.io/post/zhao-liang-ge-shu-zhong-zui-da-zhe</id>
+        <link href="https://delta-1619khz.github.io/post/zhao-liang-ge-shu-zhong-zui-da-zhe">
+        </link>
+        <updated>2020-06-28T06:55:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>本题要求对两个整数a和b，输出其中较大的数。</p>
+<p>函数接口定义：<br>
+int max( int a, int b );<br>
+其中a和b是用户传入的参数，函数返回的是两者中较大的数。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int max( int a, int b );</p>
+<p>int main()<br>
+{<br>
+int a, b;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+printf(&quot;max = %d\n&quot;, max(a, b));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+-5 8<br>
+输出样例：<br>
+max = 8</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本题要求对两个整数a和b，输出其中较大的数。</p>
+<p>函数接口定义：<br>
+int max( int a, int b );<br>
+其中a和b是用户传入的参数，函数返回的是两者中较大的数。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int max( int a, int b );</p>
+<p>int main()<br>
+{<br>
+int a, b;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+printf(&quot;max = %d\n&quot;, max(a, b));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+-5 8<br>
+输出样例：<br>
+max = 8</p>
+<!-- more -->
+<p>int max(int a, int b)<br>
+{<br>
+return a&gt;b?a:b;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[求m到n之和]]></title>
+        <id>https://delta-1619khz.github.io/post/qiu-m-dao-n-zhi-he</id>
+        <link href="https://delta-1619khz.github.io/post/qiu-m-dao-n-zhi-he">
+        </link>
+        <updated>2020-06-28T06:46:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>本题要求实现一个计算m~n（m&lt;n）之间所有整数的和的简单函数。</p>
+<p>函数接口定义：<br>
+int sum( int m, int n );<br>
+其中m和n是用户传入的参数，保证有m&lt;n。函数返回的是m~n之间所有整数的和。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int sum(int m, int n);</p>
+<p>int main()<br>
+{<br>
+int m, n;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
+printf(&quot;sum = %d\n&quot;, sum(m, n));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+-5 8<br>
+输出样例：<br>
+sum = 21</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本题要求实现一个计算m~n（m&lt;n）之间所有整数的和的简单函数。</p>
+<p>函数接口定义：<br>
+int sum( int m, int n );<br>
+其中m和n是用户传入的参数，保证有m&lt;n。函数返回的是m~n之间所有整数的和。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;</p>
+<p>int sum(int m, int n);</p>
+<p>int main()<br>
+{<br>
+int m, n;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
+printf(&quot;sum = %d\n&quot;, sum(m, n));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+-5 8<br>
+输出样例：<br>
+sum = 21</p>
+<!-- more -->
+<p>int sum(int m,int n)<br>
+{<br>
+int sum=0;<br>
+for(;m&lt;=n;m++) sum+= m;<br>
+return sum;<br>
+}</p>
 ]]></content>
     </entry>
 </feed>

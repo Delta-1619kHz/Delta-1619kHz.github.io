@@ -2,24 +2,21 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | Gridea</title>
+<title>使用函数求素数和 | Gridea</title>
 <link rel="shortcut icon" href="https://delta-1619khz.github.io//favicon.ico?v=1593353062927">
 <link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://delta-1619khz.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hello Gridea | Gridea - Atom Feed" href="https://delta-1619khz.github.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="使用函数求素数和 | Gridea - Atom Feed" href="https://delta-1619khz.github.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...
-
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdo..." />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="本题要求实现一个判断素数的简单函数、以及利用该函数计算给定区间内素数和的函数。
+素数就是只能被1和自身整除的正整数。注意：1不是素数，2是素数。
+函数接口定义：
+int prime( int p );
+int PrimeSum( int m..." />
+    <meta name="keywords" content="Pintia-c" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -81,63 +78,89 @@ Gridea 主页
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              使用函数求素数和
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2020-06-28
               </span>
               <span>
                 2 min read
               </span>
               
-                <a href="https://delta-1619khz.github.io/tag/IqFjLrJhg" class="post-tag">
-                  # Gridea
+                <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
+                  # Pintia-c
                 </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://delta-1619khz.github.io//post-images/hello-gridea.png" alt="">
-            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+                <p>本题要求实现一个判断素数的简单函数、以及利用该函数计算给定区间内素数和的函数。</p>
+<p>素数就是只能被1和自身整除的正整数。注意：1不是素数，2是素数。</p>
+<p>函数接口定义：<br>
+int prime( int p );<br>
+int PrimeSum( int m, int n );<br>
+其中函数prime当用户传入参数p为素数时返回1，否则返回0；函数PrimeSum返回区间[m, n]内所有素数的和。题目保证用户传入的参数m≤n。</p>
+<p>裁判测试程序样例：<br>
+#include &lt;stdio.h&gt;<br>
+#include &lt;math.h&gt;</p>
+<p>int prime( int p );<br>
+int PrimeSum( int m, int n );</p>
+<p>int main()<br>
+{<br>
+int m, n, p;</p>
+<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
+printf(&quot;Sum of ( &quot;);
+for( p=m; p&lt;=n; p++ ) {
+    if( prime(p) != 0 )
+        printf(&quot;%d &quot;, p);
+}
+printf(&quot;) = %d\n&quot;, PrimeSum(m, n));
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>/* 你的代码将被嵌在这里 */<br>
+输入样例：<br>
+-1 10<br>
+输出样例：<br>
+Sum of ( 2 3 5 7 ) = 17</p>
 <!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<p>int prime( int p )<br>
+{<br>
+int i;<br>
+if (p&lt;=1) return 0;<br>
+for (i=2;i&lt;=sqrt(p);i++)<br>
+if (p%i==0) return 0;<br>
+return 1;<br>
+}<br>
+int PrimeSum( int m, int n)<br>
+{<br>
+int p=m, sum=0;<br>
+if (p&lt;=1) p=2;<br>
+for (;p&lt;=n;p++)<br>
+if (prime(p)!=0) sum+=p;<br>
+return sum;<br>
+}</p>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://delta-1619khz.github.io/post/shi-yong-han-shu-ji-suan-liang-dian-zhi-jian-de-ju-chi">
+              <h3 class="post-title">
+                使用函数计算两点之间的距离
+              </h3>
+            </a>
+          </div>
         
 
         
