@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gridea</title>
-<link rel="shortcut icon" href="https://delta-1619khz.github.io//favicon.ico?v=1593353062927">
+<link rel="shortcut icon" href="https://delta-1619khz.github.io//favicon.ico?v=1606639797661">
 <link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://delta-1619khz.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Gridea - Atom Feed" href="https://delta-1619khz.github.io//atom.xml">
@@ -18,7 +18,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://delta-1619khz.github.io/">
-  <img class="avatar" src="https://delta-1619khz.github.io//images/avatar.png?v=1593353062927" alt="">
+  <img class="avatar" src="https://delta-1619khz.github.io//images/avatar.png?v=1606639797661" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -72,475 +72,29 @@
         <div class="post-container">
   
     <article class="post">
-      <a href="https://delta-1619khz.github.io/post/shi-yong-han-shu-qiu-yu-xian-han-shu-de-jin-si-zhi">
-        <h2 class="post-title">使用函数求余弦函数的近似值</h2>
+      <a href="https://delta-1619khz.github.io/post/hello-gridea">
+        <h2 class="post-title">Hello Gridea</h2>
       </a>
       <div class="post-info">
         <span>
-          2020-06-28
+          2018-12-12
         </span>
         <span>
           2 min read
         </span>
         
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
+          <a href="https://delta-1619khz.github.io/tag/IqFjLrJhg" class="post-tag">
+            # Gridea
           </a>
         
       </div>
       
-      <div class="post-abstract">
-        <p>本题要求实现一个函数，用下列公式求cos(x)的近似值，精确到最后一项的绝对值小于e：</p>
-<p>cos(x)=x<sup>0/0!−x</sup>2/2!+x<sup>4/4!−x</sup>6/6!+⋯</p>
-<p>函数接口定义：<br>
-double funcos( double e, double x );<br>
-其中用户传入的参数为误差上限e和自变量x；函数funcos应返回用给定公式计算出来、并且满足误差要求的cos(x)的近似值。输入输出均在双精度范围内。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;<br>
-#include &lt;math.h&gt;</p>
-<p>double funcos( double e, double x );</p>
-<p>int main()<br>
-{<br>
-double e, x;</p>
-<pre><code>scanf(&quot;%lf %lf&quot;, &amp;e, &amp;x);
-printf(&quot;cos(%.2f) = %.6f\n&quot;, x, funcos(e, x));
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
-0.01 -3.14<br>
-输出样例：<br>
-cos(-3.14) = -0.999899</p>
-
-      </div>
-    </article>
-  
-    <article class="post">
-      <a href="https://delta-1619khz.github.io/post/shi-yong-han-shu-shu-chu-shui-xian-hua-shu">
-        <h2 class="post-title">使用函数输出水仙花数</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-06-28
-        </span>
-        <span>
-          2 min read
-        </span>
-        
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
-          </a>
-        
-      </div>
+        <a href="https://delta-1619khz.github.io/post/hello-gridea" class="post-feature-image" style="background-image: url('https://delta-1619khz.github.io//post-images/hello-gridea.png')">
+        </a>
       
       <div class="post-abstract">
-        <p>水仙花数是指一个N位正整数（N≥3），它的每个位上的数字的N次幂之和等于它本身。例如：153=1<sup>3+5</sup>3+3^3​。 本题要求编写两个函数，一个判断给定整数是否水仙花数，另一个按从小到大的顺序打印出给定区间(m,n)内所有的水仙花数。</p>
-<p>函数接口定义：<br>
-int narcissistic( int number );<br>
-void PrintN( int m, int n );<br>
-函数narcissistic判断number是否为水仙花数，是则返回1，否则返回0。</p>
-<p>函数PrintN则打印开区间(m, n)内所有的水仙花数，每个数字占一行。题目保证100≤m≤n≤10000。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;</p>
-<p>int narcissistic( int number );<br>
-void PrintN( int m, int n );</p>
-<p>int main()<br>
-{<br>
-int m, n;</p>
-<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
-if ( narcissistic(m) ) printf(&quot;%d is a narcissistic number\n&quot;, m);
-PrintN(m, n);
-if ( narcissistic(n) ) printf(&quot;%d is a narcissistic number\n&quot;, n);
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
-153 400<br>
-输出样例：<br>
-153 is a narcissistic number<br>
-370<br>
-371</p>
-
-      </div>
-    </article>
-  
-    <article class="post">
-      <a href="https://delta-1619khz.github.io/post/shi-yong-han-shu-tong-ji-zhi-ding-shu-zi-de-ge-shu">
-        <h2 class="post-title">使用函数统计指定数字的个数</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-06-28
-        </span>
-        <span>
-          1 min read
-        </span>
-        
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>本题要求实现一个统计整数中指定数字的个数的简单函数。</p>
-<p>函数接口定义：<br>
-int CountDigit( int number, int digit );<br>
-其中number是不超过长整型的整数，digit为[0, 9]区间内的整数。函数CountDigit应返回number中digit出现的次数。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;</p>
-<p>int CountDigit( int number, int digit );</p>
-<p>int main()<br>
-{<br>
-int number, digit;</p>
-<pre><code>scanf(&quot;%d %d&quot;, &amp;number, &amp;digit);
-printf(&quot;Number of digit %d in %d: %d\n&quot;, digit, number, CountDigit(number, digit));
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
--21252 2<br>
-输出样例：<br>
-Number of digit 2 in -21252: 3</p>
-
-      </div>
-    </article>
-  
-    <article class="post">
-      <a href="https://delta-1619khz.github.io/post/shi-yong-han-shu-qiu-su-shu-he">
-        <h2 class="post-title">使用函数求素数和</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-06-28
-        </span>
-        <span>
-          2 min read
-        </span>
-        
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>本题要求实现一个判断素数的简单函数、以及利用该函数计算给定区间内素数和的函数。</p>
-<p>素数就是只能被1和自身整除的正整数。注意：1不是素数，2是素数。</p>
-<p>函数接口定义：<br>
-int prime( int p );<br>
-int PrimeSum( int m, int n );<br>
-其中函数prime当用户传入参数p为素数时返回1，否则返回0；函数PrimeSum返回区间[m, n]内所有素数的和。题目保证用户传入的参数m≤n。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;<br>
-#include &lt;math.h&gt;</p>
-<p>int prime( int p );<br>
-int PrimeSum( int m, int n );</p>
-<p>int main()<br>
-{<br>
-int m, n, p;</p>
-<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
-printf(&quot;Sum of ( &quot;);
-for( p=m; p&lt;=n; p++ ) {
-    if( prime(p) != 0 )
-        printf(&quot;%d &quot;, p);
-}
-printf(&quot;) = %d\n&quot;, PrimeSum(m, n));
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
--1 10<br>
-输出样例：<br>
-Sum of ( 2 3 5 7 ) = 17</p>
-
-      </div>
-    </article>
-  
-    <article class="post">
-      <a href="https://delta-1619khz.github.io/post/shi-yong-han-shu-ji-suan-liang-dian-zhi-jian-de-ju-chi">
-        <h2 class="post-title">使用函数计算两点之间的距离</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-06-28
-        </span>
-        <span>
-          1 min read
-        </span>
-        
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>本题要求实现一个函数，对给定平面任意两点坐标(x1​​,y​1)和(x​2​,y​2)，求这两点之间的距离。</p>
-<p>函数接口定义：<br>
-double dist( double x1, double y1, double x2, double y2 );<br>
-其中用户传入的参数为平面上两个点的坐标(x1, y1)和(x2, y2)，函数dist应返回两点间的距离。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;<br>
-#include &lt;math.h&gt;</p>
-<p>double dist( double x1, double y1, double x2, double y2 );</p>
-<p>int main()<br>
-{<br>
-double x1, y1, x2, y2;</p>
-<pre><code>scanf(&quot;%lf %lf %lf %lf&quot;, &amp;x1, &amp;y1, &amp;x2, &amp;y2);
-printf(&quot;dist = %.2f\n&quot;, dist(x1, y1, x2, y2));
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
-10 10 200 100<br>
-输出样例：<br>
-dist = 210.24</p>
-
-      </div>
-    </article>
-  
-    <article class="post">
-      <a href="https://delta-1619khz.github.io/post/shi-yong-han-shu-qiu-qi-shu-he">
-        <h2 class="post-title">使用函数求奇数和</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-06-28
-        </span>
-        <span>
-          2 min read
-        </span>
-        
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>本题要求实现一个函数，计算N个整数中所有奇数的和，同时实现一个判断奇偶性的函数。</p>
-<p>函数接口定义：<br>
-int even( int n );<br>
-int OddSum( int List[], int N );<br>
-其中函数even将根据用户传入的参数n的奇偶性返回相应值：当n为偶数时返回1，否则返回0。函数OddSum负责计算并返回传入的N个整数List[]中所有奇数的和。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;</p>
-<p>#define MAXN 10</p>
-<p>int even( int n );<br>
-int OddSum( int List[], int N );</p>
-<p>int main()<br>
-{<br>
-int List[MAXN], N, i;</p>
-<pre><code>scanf(&quot;%d&quot;, &amp;N);
-printf(&quot;Sum of ( &quot;);//事实上，&quot;Sum of (&quot;在此处并不和样例一样
-for ( i=0; i&lt;N; i++ ) {
-    scanf(&quot;%d&quot;, &amp;List[i]);
-    if ( even(List[i])==0 )
-        printf(&quot;%d &quot;, List[i]);
-}
-printf(&quot;) = %d\n&quot;, OddSum(List, N));
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
-6<br>
-2 -3 7 88 0 15<br>
-输出样例：<br>
-Sum of ( -3 7 15 ) = 19</p>
-
-      </div>
-    </article>
-  
-    <article class="post">
-      <a href="https://delta-1619khz.github.io/post/fu-hao-han-shu">
-        <h2 class="post-title">符号函数</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-06-28
-        </span>
-        <span>
-          1 min read
-        </span>
-        
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>本题要求实现符号函数sign(x)。</p>
-<p>函数接口定义：<br>
-int sign( int x );<br>
-其中x是用户传入的整型参数。符号函数的定义为：若x大于0，sign(x) = 1；若x等于0，sign(x) = 0；否则，sign(x) = −1。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;</p>
-<p>int sign( int x );</p>
-<p>int main()<br>
-{<br>
-int x;</p>
-<pre><code>scanf(&quot;%d&quot;, &amp;x);
-printf(&quot;sign(%d) = %d\n&quot;, x, sign(x));
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
-10<br>
-输出样例：<br>
-sign(10) = 1</p>
-
-      </div>
-    </article>
-  
-    <article class="post">
-      <a href="https://delta-1619khz.github.io/post/shu-zi-jin-zi-ta">
-        <h2 class="post-title">数字金字塔</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-06-28
-        </span>
-        <span>
-          1 min read
-        </span>
-        
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>本题要求实现函数输出n行数字金字塔。</p>
-<p>函数接口定义：<br>
-void pyramid( int n );<br>
-其中n是用户传入的参数，为[1, 9]的正整数。要求函数按照如样例所示的格式打印出n行数字金字塔。注</p>
-<p>意每个数字后面跟一个空格。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;</p>
-<p>void pyramid( int n );</p>
-<p>int main()<br>
-{<br>
-int n;</p>
-<pre><code>scanf(&quot;%d&quot;, &amp;n);
-pyramid(n);
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
-5<br>
-输出样例：<br>
-1<br>
-2 2<br>
-3 3 3<br>
-4 4 4 4<br>
-5 5 5 5 5</p>
-
-      </div>
-    </article>
-  
-    <article class="post">
-      <a href="https://delta-1619khz.github.io/post/zhao-liang-ge-shu-zhong-zui-da-zhe">
-        <h2 class="post-title">找两个数中最大者</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-06-28
-        </span>
-        <span>
-          1 min read
-        </span>
-        
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>本题要求对两个整数a和b，输出其中较大的数。</p>
-<p>函数接口定义：<br>
-int max( int a, int b );<br>
-其中a和b是用户传入的参数，函数返回的是两者中较大的数。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;</p>
-<p>int max( int a, int b );</p>
-<p>int main()<br>
-{<br>
-int a, b;</p>
-<pre><code>scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
-printf(&quot;max = %d\n&quot;, max(a, b));
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
--5 8<br>
-输出样例：<br>
-max = 8</p>
-
-      </div>
-    </article>
-  
-    <article class="post">
-      <a href="https://delta-1619khz.github.io/post/qiu-m-dao-n-zhi-he">
-        <h2 class="post-title">求m到n之和</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-06-28
-        </span>
-        <span>
-          1 min read
-        </span>
-        
-          <a href="https://delta-1619khz.github.io/tag/mnvYAoxSg" class="post-tag">
-            # Pintia-c
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>本题要求实现一个计算m~n（m&lt;n）之间所有整数的和的简单函数。</p>
-<p>函数接口定义：<br>
-int sum( int m, int n );<br>
-其中m和n是用户传入的参数，保证有m&lt;n。函数返回的是m~n之间所有整数的和。</p>
-<p>裁判测试程序样例：<br>
-#include &lt;stdio.h&gt;</p>
-<p>int sum(int m, int n);</p>
-<p>int main()<br>
-{<br>
-int m, n;</p>
-<pre><code>scanf(&quot;%d %d&quot;, &amp;m, &amp;n);
-printf(&quot;sum = %d\n&quot;, sum(m, n));
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>/* 你的代码将被嵌在这里 */<br>
-输入样例：<br>
--5 8<br>
-输出样例：<br>
-sum = 21</p>
+        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
       </div>
     </article>
@@ -550,8 +104,6 @@ sum = 21</p>
     
         <div class="pagination-container">
   
-  
-    <a href="https://delta-1619khz.github.io/page/2" class="next-page">下一页</a>
   
 </div>
 
