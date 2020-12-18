@@ -2,24 +2,33 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | Gridea</title>
+<title>[Java] | Gridea</title>
 <link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1608310015802">
 <link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Noo8ie.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hello Gridea | Gridea - Atom Feed" href="https://Noo8ie.github.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="[Java] | Gridea - Atom Feed" href="https://Noo8ie.github.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...
+    <meta name="description" content="数据类型
+转换必须满足如下规则：
 
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdo..." />
-    <meta name="keywords" content="Gridea" />
+
+不能对boolean类型进行类型转换。
+
+
+不能把对象类型转换成不相关类的对象。
+
+
+在把容量大的类型转换为容量小的类型时必须使用强制类型转换。⭐️
+
+
+转换过程中可能导致溢出或损失精度。
+
+
+隐含强制..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -81,56 +90,75 @@ Gridea 主页
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              [Java]
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2020-12-13
               </span>
               <span>
                 2 min read
               </span>
               
-                <a href="https://Noo8ie.github.io/tag/IqFjLrJhg" class="post-tag">
-                  # Gridea
-                </a>
-              
             </div>
-            
-              <img class="post-feature-image" src="https://Noo8ie.github.io//post-images/hello-gridea.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+                <h1 id="数据类型">数据类型</h1>
+<p>转换必须满足如下规则：</p>
+<ol>
+<li>
+<p>不能对boolean类型进行类型转换。</p>
+</li>
+<li>
+<p>不能把对象类型转换成不相关类的对象。</p>
+</li>
+<li>
+<p>在把容量大的类型转换为容量小的类型时必须使用强制类型转换。⭐️</p>
+</li>
+<li>
+<p>转换过程中可能导致溢出或损失精度。</p>
+</li>
+</ol>
+<p>隐含强制类型转换</p>
+<ol>
+<li>
+<p>整数的默认类型是 int。</p>
+</li>
+<li>
+<p>浮点型不存在这种情况，因为在定义 float 类型时必须在数字后面跟上 F 或<br>
+者 f。</p>
+</li>
+</ol>
+<p>将 boolean 转换为 int<br>
+唯一的方法：<br>
+int myInt = myBoolean ? 1 : 0;</p>
+<h1 id="静态变量static">静态变量static</h1>
+<p>静态变量除了能在定义它的类内存取，还能直接以“类名.静态变量”的方式在其它类内使用。</p>
+<h1 id="按位运算">按位运算^</h1>
+<p>相同取0，不同取1<br>
+A = 0011 1100<br>
+B = 0000 1101<br>
+A ^ B = 0011 0001</p>
+<h1 id="stringbuffer-和-stringbuiler">StringBuffer 和 StringBuiler</h1>
+<figure data-type="image" tabindex="1"><img src="https://Noo8ie.github.io//post-images/1608011196944.png" alt="" loading="lazy"></figure>
+<h1 id="数组">数组</h1>
+<p>增强型for循环<br>
+<code>for(type element:array){};</code><br>
+式中，type为数组array的类型；element是用来存放数组中元素的临时变量；array是待操作的数组。<br>
+作用是：<br>
+对数组中的数据依次进行存取。代码的功能是：每次从数组中取出元素[i]，并自动设定给p，不用判断是否超出了数组的长度。<br>
+优点：<br>
+每次从数组array中取数据，会自动赋给变量element，并且不用编译器判断是否超出了数组的长度。也即省去了标准for语句里的判决条件，如”i&lt;=array.length“。</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
-</ul>
-</li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">数据类型</a></li>
+<li><a href="#%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8Fstatic">静态变量static</a></li>
+<li><a href="#%E6%8C%89%E4%BD%8D%E8%BF%90%E7%AE%97">按位运算^</a></li>
+<li><a href="#stringbuffer-%E5%92%8C-stringbuiler">StringBuffer 和 StringBuiler</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84">数组</a></li>
 </ul>
 
               </div>
@@ -138,6 +166,15 @@ Gridea 主页
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Noo8ie.github.io/post/hello-gridea">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
         
 
         
