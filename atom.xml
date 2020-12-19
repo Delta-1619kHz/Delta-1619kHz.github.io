@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-12-18T16:50:13.320Z</updated>
+    <updated>2020-12-19T02:43:39.869Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
@@ -16,22 +16,52 @@
         <link href="https://Noo8ie.github.io/post/escdian-zi-diao-su-qi">
         </link>
         <updated>2020-12-18T16:19:36.000Z</updated>
-        <content type="html"><![CDATA[<p>ElectronicSpeedControl<br>
-作用<br>
-1、电机供电<br>
-2、控制电机转速<br>
-3、电源输出功能：在信号线正负极之间，有5V电压输出，通过信号线为接收机供电，接收机再为舵机等设备供电</p>
-<p>分类<br>
-1、有刷电调：使用机械转向器，改变电流方向<br>
-2、无刷电调：使用电子转向器，将直流电流转换为三相交流电流</p>
-<p>1、BEC：免电池电路，具有分流供电的能力，可将电池的电压变为5V给飞控供电<br>
-2、OPTO光电电调：需单独给光电供电</p>
+        <content type="html"><![CDATA[<blockquote>
+<p>ElectronicSpeedControl</p>
+<blockquote>
+<p>作用</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>电机供电</li>
+<li>控制电机转速</li>
+<li>电源输出功能：在信号线正负极之间，有5V电压输出，通过信号线为接收机供电，接收机再为舵机等设备供电</li>
+</ul>
+<blockquote>
+<blockquote>
+<p>分类</p>
+</blockquote>
+</blockquote>
+<ol>
+<li>
+<p>有刷电调：使用机械转向器，改变电流方向</p>
+</li>
+<li>
+<p>无刷电调：使用电子转向器，将直流电流转换为三相交流电流</p>
+</li>
+<li>
+<p>BEC：免电池电路，具有分流供电的能力，可将电池的电压变为5V给飞控供电</p>
+</li>
+<li>
+<p>OPTO光电电调：需单独给光电供电</p>
+</li>
+</ol>
+<blockquote>
+<blockquote>
 <p>选择<br>
 略大于电机最大效率电流，但不宜过大，以免影响电机寿命。一般一组电调中保留一个电调供电，其余选择OPTO光电电调</p>
-<p>连接<br>
-1、输入线：最粗红黑线<br>
-2、输出线：有刷两根、无刷三根<br>
-3、信号线：最细线</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>连接</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>输入线：最粗红黑线</li>
+<li>输出线：有刷两根、无刷三根</li>
+<li>信号线：最细线</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
