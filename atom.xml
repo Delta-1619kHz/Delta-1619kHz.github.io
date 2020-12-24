@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-12-24T13:54:47.331Z</updated>
+    <updated>2020-12-24T17:13:39.877Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
@@ -10,6 +10,105 @@
     <logo>https://Noo8ie.github.io/images/avatar.png</logo>
     <icon>https://Noo8ie.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[数字电子技术]]></title>
+        <id>https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu</id>
+        <link href="https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu">
+        </link>
+        <updated>2020-12-24T16:13:29.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="基本运算">基本运算</h1>
+<p>与或非<br>
+=与-<br>
+|<br>
+=或-非-<br>
+|<br>
+=与-<br>
+异或<br>
+A ⊕ B=A · B' + A' · B<br>
+同或<br>
+A ⊙ B=A · B + A' · B'<br>
+A、B同，Y为1，不同为0</p>
+<h1 id="逻辑代数公式">逻辑代数公式</h1>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>公式</th>
+<th>序号</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0 · A = 0</td>
+<td>10</td>
+<td>1' = 0; 0' = 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1 · A = A</td>
+<td>11</td>
+<td>1+A = 1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A · A = A</td>
+<td>12</td>
+<td>0+A = A</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A · A' = 0</td>
+<td>13</td>
+<td>A+A = A</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A · B = B</td>
+<td>14</td>
+<td>A+A' = 1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>A · (B · C) = (A · B) · C</td>
+<td>15</td>
+<td>A+B = B+A</td>
+</tr>
+<tr>
+<td>7</td>
+<td>A · (B+C) = A · B + A · C</td>
+<td>16</td>
+<td>A+(B+C) = (A+B)+C</td>
+</tr>
+<tr>
+<td>8</td>
+<td>⭐️(A · B)' = A' + B'</td>
+<td>17</td>
+<td>⭐️ A+B ·  C = (A+B) · (A+C)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>(A')' = A</td>
+<td>18</td>
+<td>⭐️ (A+B)' = A' · B'</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>4与14互补，5和15交换律，6和16结合律，7和17分配律<br>
+实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有限呢</s><br>
+常用公式<br>
+| 序号 | 公式 |<br>
+| ---- | ---- |<br>
+| 21 | A + A · B = A |<br>
+| 22 | A + A' · B = A+B |<br>
+| 23 | A · B+A · B' = A |<br>
+| 24 | A · (A+B) = A |<br>
+| 25 |</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[ESC]电子调速器]]></title>
         <id>https://Noo8ie.github.io/post/escdian-zi-diao-su-qi</id>
