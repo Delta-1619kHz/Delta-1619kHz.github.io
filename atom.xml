@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-12-24T17:13:39.877Z</updated>
+    <updated>2020-12-25T17:28:52.851Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
@@ -105,7 +105,9 @@ A、B同，Y为1，不同为0</p>
 | 22 | A + A' · B = A+B |<br>
 | 23 | A · B+A · B' = A |<br>
 | 24 | A · (A+B) = A |<br>
-| 25 |</p>
+| 25 | A · B+A' · C+B · C = A · B+A' · C |<br>
+|      | A · B+A' · C+BCD = A · B+A' · C |<br>
+| 26 | A · (A · B)' = A · B'; A' · (AB)' = A' |</p>
 </blockquote>
 ]]></content>
     </entry>
@@ -147,73 +149,6 @@ A、B同，Y为1，不同为0</p>
 <li>输出线：有刷两根、无刷三根</li>
 <li>信号线：最细线</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Java]]]></title>
-        <id>https://Noo8ie.github.io/post/java</id>
-        <link href="https://Noo8ie.github.io/post/java">
-        </link>
-        <updated>2020-12-13T10:25:56.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="数据类型">数据类型</h1>
-<p>转换必须满足如下规则：</p>
-<ol>
-<li>
-<p>不能对boolean类型进行类型转换。</p>
-</li>
-<li>
-<p>不能把对象类型转换成不相关类的对象。</p>
-</li>
-<li>
-<p>在把容量大的类型转换为容量小的类型时必须使用强制类型转换。⭐️</p>
-</li>
-<li>
-<p>转换过程中可能导致溢出或损失精度。</p>
-</li>
-</ol>
-<p>隐含强制类型转换</p>
-<ol>
-<li>
-<p>整数的默认类型是 int。</p>
-</li>
-<li>
-<p>浮点型不存在这种情况，因为在定义 float 类型时必须在数字后面跟上 F 或<br>
-者 f。</p>
-</li>
-</ol>
-<p>将 boolean 转换为 int<br>
-唯一的方法：<br>
-int myInt = myBoolean ? 1 : 0;</p>
-<h1 id="静态方法static">静态方法static</h1>
-<p>在不创建对象的情况下调用某个方法，就可以将这个方法设置为static，不能访问非静态成员/方法</p>
-<blockquote>
-<p>非静态方法可以访问静态成员/方法</p>
-</blockquote>
-<h1 id="静态变量static">静态变量static</h1>
-<p>静态变量除了能在定义它的类内存取，还能直接以“类名.静态变量”的方式在其它类内使用。</p>
-<blockquote>
-<p>static不能用来修饰局部变量</p>
-</blockquote>
-<h1 id="按位运算">按位运算^</h1>
-<p>相同取0，不同取1<br>
-A = 0011 1100<br>
-B = 0000 1101<br>
-A ^ B = 0011 0001</p>
-<h1 id="stringbuffer-和-stringbuiler">StringBuffer 和 StringBuiler</h1>
-<figure data-type="image" tabindex="1"><img src="https://Noo8ie.github.io//post-images/1608310204032.png" alt="" loading="lazy"></figure>
-<h1 id="数组">数组</h1>
-<p>增强型for循环<br>
-<code>for(type element:array){};</code><br>
-式中，type为数组array的类型；element是用来存放数组中元素的临时变量；array是待操作的数组。<br>
-作用是：<br>
-对数组中的数据依次进行存取。代码的功能是：每次从数组中取出元素[i]，并自动设定给p，不用判断是否超出了数组的长度。<br>
-优点：<br>
-每次从数组array中取数据，会自动赋给变量element，并且不用编译器判断是否超出了数组的长度。也即省去了标准for语句里的判决条件，如”i&lt;=array.length“。<br>
-equals和==区别</p>
-<h1 id="接口interface">接口interface</h1>
-<p>接口中的方法会被隐式地指定为public abstract(只能是)<br>
-接口中只能有static和final变量<br>
-可多继承</p>
 ]]></content>
     </entry>
     <entry>
