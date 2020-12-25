@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-12-25T17:28:52.851Z</updated>
+    <updated>2020-12-25T17:57:16.549Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
@@ -97,18 +97,47 @@ A、B同，Y为1，不同为0</p>
 </table>
 <blockquote>
 <p>4与14互补，5和15交换律，6和16结合律，7和17分配律<br>
-实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有限呢</s><br>
-常用公式<br>
-| 序号 | 公式 |<br>
-| ---- | ---- |<br>
-| 21 | A + A · B = A |<br>
-| 22 | A + A' · B = A+B |<br>
-| 23 | A · B+A · B' = A |<br>
-| 24 | A · (A+B) = A |<br>
-| 25 | A · B+A' · C+B · C = A · B+A' · C |<br>
-|      | A · B+A' · C+BCD = A · B+A' · C |<br>
-| 26 | A · (A · B)' = A · B'; A' · (AB)' = A' |</p>
+实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有限呢</s></p>
 </blockquote>
+<h2 id="常用公式">常用公式</h2>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>A + A · B = A</td>
+</tr>
+<tr>
+<td>22</td>
+<td>A + A' · B = A+B</td>
+</tr>
+<tr>
+<td>23</td>
+<td>A · B+A · B' = A</td>
+</tr>
+<tr>
+<td>24</td>
+<td>A · (A+B) = A</td>
+</tr>
+<tr>
+<td>25</td>
+<td>A · B+A' · C+B · C = A · B+A' · C</td>
+</tr>
+<tr>
+<td></td>
+<td>A · B+A' · C+BCD = A · B+A' · C</td>
+</tr>
+<tr>
+<td>26</td>
+<td>A · (A · B)' = A · B'; A' · (AB)' = A'</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     <entry>
