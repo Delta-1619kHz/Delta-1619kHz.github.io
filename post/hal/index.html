@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>[HAL] | Gridea</title>
+<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1608998946570">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://Noo8ie.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="[HAL] | Gridea - Atom Feed" href="https://Noo8ie.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)
+PinState: GPIO_PIN_RESET 低电平 GPIO..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://Noo8ie.github.io/">
+  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1608998946570" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    <论废物的自我修养>
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              [HAL]
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-12-26
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p><code>void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)</code><br>
+PinState: GPIO_PIN_RESET 低电平 GPIO_PIN_SET 高电平</p>
+<p><code>void HAL_GPIO_TogglePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)</code><br>
+电平反转</p>
+<p><code>__weak void HAL_Delay(uint32_t Delay )</code><br>
+参数1为1毫秒</p>
+<blockquote>
+<p>只可实现毫秒级，微秒级自行通过__nop();编写</p>
+</blockquote>
+<p><code>void HAL_TIM_IRQHandler(TIM_HandleTypeDef *htim)</code><br>
+在HAL_TIM_IRQHandler对各个涉及中断的寄存器进行了处理之后，会自动调用中断回调函数</p>
+<p><code>__weak void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*htim)</code><br>
+定时器回调函数，一般在此判断中断来源并执行相应的用户操作</p>
+<blockquote>
+<p>一般在main.c中重定义，并编写不同中断内</p>
+</blockquote>
+<p>`void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)<br>
+{<br>
+if(htim == &amp;htim1){</p>
+<pre><code>}
+</code></pre>
+<p>}`</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu">
+              <h3 class="post-title">
+                数字电子技术
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://Noo8ie.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

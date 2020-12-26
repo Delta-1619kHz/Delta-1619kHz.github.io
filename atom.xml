@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Noo8ie.github.io/</id>
+    <title>Gridea</title>
+    <updated>2020-12-26T16:09:46.089Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://Noo8ie.github.io/"/>
+    <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
+    <subtitle>&lt;论废物的自我修养&gt;</subtitle>
+    <logo>https://Noo8ie.github.io/images/avatar.png</logo>
+    <icon>https://Noo8ie.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[[HAL]]]></title>
+        <id>https://Noo8ie.github.io/post/hal</id>
+        <link href="https://Noo8ie.github.io/post/hal">
+        </link>
+        <updated>2020-12-26T12:31:26.000Z</updated>
+        <content type="html"><![CDATA[<p><code>void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)</code><br>
+PinState: GPIO_PIN_RESET 低电平 GPIO_PIN_SET 高电平</p>
+<p><code>void HAL_GPIO_TogglePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)</code><br>
+电平反转</p>
+<p><code>__weak void HAL_Delay(uint32_t Delay )</code><br>
+参数1为1毫秒</p>
+<blockquote>
+<p>只可实现毫秒级，微秒级自行通过__nop();编写</p>
+</blockquote>
+<p><code>void HAL_TIM_IRQHandler(TIM_HandleTypeDef *htim)</code><br>
+在HAL_TIM_IRQHandler对各个涉及中断的寄存器进行了处理之后，会自动调用中断回调函数</p>
+<p><code>__weak void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*htim)</code><br>
+定时器回调函数，一般在此判断中断来源并执行相应的用户操作</p>
+<blockquote>
+<p>一般在main.c中重定义，并编写不同中断内</p>
+</blockquote>
+<p>`void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)<br>
+{<br>
+if(htim == &amp;htim1){</p>
+<pre><code>}
+</code></pre>
+<p>}`</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数字电子技术]]></title>
+        <id>https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu</id>
+        <link href="https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu">
+        </link>
+        <updated>2020-12-24T16:13:29.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="基本运算">基本运算</h1>
+<p>与或非<br>
+=与-<br>
+|<br>
+=或-非-<br>
+|<br>
+=与-<br>
+异或<br>
+A ⊕ B=A · B' + A' · B<br>
+同或<br>
+A ⊙ B=A · B + A' · B'<br>
+A、B同，Y为1，不同为0</p>
+<h1 id="逻辑代数公式">逻辑代数公式</h1>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>公式</th>
+<th>序号</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0 · A = 0</td>
+<td>10</td>
+<td>1' = 0; 0' = 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1 · A = A</td>
+<td>11</td>
+<td>1+A = 1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A · A = A</td>
+<td>12</td>
+<td>0+A = A</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A · A' = 0</td>
+<td>13</td>
+<td>A+A = A</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A · B = B</td>
+<td>14</td>
+<td>A+A' = 1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>A · (B · C) = (A · B) · C</td>
+<td>15</td>
+<td>A+B = B+A</td>
+</tr>
+<tr>
+<td>7</td>
+<td>A · (B+C) = A · B + A · C</td>
+<td>16</td>
+<td>A+(B+C) = (A+B)+C</td>
+</tr>
+<tr>
+<td>8</td>
+<td>⭐️(A · B)' = A' + B'</td>
+<td>17</td>
+<td>⭐️ A+B ·  C = (A+B) · (A+C)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>(A')' = A</td>
+<td>18</td>
+<td>⭐️ (A+B)' = A' · B'</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>4与14互补，5和15交换律，6和16结合律，7和17分配律<br>
+实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有限呢</s></p>
+</blockquote>
+<h2 id="常用公式">常用公式</h2>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>A + A · B = A</td>
+</tr>
+<tr>
+<td>22</td>
+<td>A + A' · B = A+B</td>
+</tr>
+<tr>
+<td>23</td>
+<td>A · B+A · B' = A</td>
+</tr>
+<tr>
+<td>24</td>
+<td>A · (A+B) = A</td>
+</tr>
+<tr>
+<td>25</td>
+<td>A · B+A' · C+B · C = A · B+A' · C</td>
+</tr>
+<tr>
+<td></td>
+<td>A · B+A' · C+BCD = A · B+A' · C</td>
+</tr>
+<tr>
+<td>26</td>
+<td>A · (A · B)' = A · B'; A' · (AB)' = A'</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ESC]电子调速器]]></title>
+        <id>https://Noo8ie.github.io/post/escdian-zi-diao-su-qi</id>
+        <link href="https://Noo8ie.github.io/post/escdian-zi-diao-su-qi">
+        </link>
+        <updated>2020-12-18T16:19:36.000Z</updated>
+        <content type="html"><![CDATA[<p>ElectronicSpeedControl<br>
+作用</p>
+<ul>
+<li>电机供电</li>
+<li>控制电机转速</li>
+<li>电源输出功能：在信号线正负极之间，有5V电压输出，通过信号线为接收机供电，接收机再为舵机等设备供电</li>
+</ul>
+<p>分类</p>
+<ol>
+<li>
+<p>有刷电调：使用机械转向器，改变电流方向</p>
+</li>
+<li>
+<p>无刷电调：使用电子转向器，将直流电流转换为三相交流电流</p>
+</li>
+<li>
+<p>BEC：免电池电路，具有分流供电的能力，可将电池的电压变为5V给飞控供电</p>
+</li>
+<li>
+<p>OPTO光电电调：需单独给光电供电</p>
+</li>
+</ol>
+<blockquote>
+<p>选择<br>
+略大于电机最大效率电流，但不宜过大，以免影响电机寿命。一般一组电调中保留一个电调供电，其余选择OPTO光电电调</p>
+</blockquote>
+<p>连接</p>
+<ul>
+<li>输入线：最粗红黑线</li>
+<li>输出线：有刷两根、无刷三根</li>
+<li>信号线：最细线</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://Noo8ie.github.io/post/hello-gridea</id>
+        <link href="https://Noo8ie.github.io/post/hello-gridea">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
