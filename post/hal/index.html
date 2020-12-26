@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>[HAL] | Gridea</title>
-<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1608999118184">
+<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1609000641569">
 <link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Noo8ie.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="[HAL] | Gridea - Atom Feed" href="https://Noo8ie.github.io//atom.xml">
@@ -22,7 +22,7 @@ PinState: GPIO_PIN_RESET 低电平 GPIO..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://Noo8ie.github.io/">
-  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1608999118184" alt="">
+  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1609000641569" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -98,12 +98,19 @@ PinState: GPIO_PIN_RESET 低电平 GPIO_PIN_SET 高电平</p>
 <blockquote>
 <p>只可实现毫秒级，微秒级自行通过__nop();编写</p>
 </blockquote>
+<p><code>HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim)</code><br>
+使对应的定时器开始工作，但不开启中断服务</p>
+<p><code>HAL_StatusTypeDef HAL_TIM_Base_Start_IT(TIM_HandleTypeDef *htim)</code><br>
+打开定时器，并开启中断服务</p>
 <p><code>void HAL_TIM_IRQHandler(TIM_HandleTypeDef *htim)</code><br>
 在HAL_TIM_IRQHandler对各个涉及中断的寄存器进行了处理之后，会自动调用中断回调函数</p>
+<blockquote>
+<p>一般不在此进行编写操作</p>
+</blockquote>
 <p><code>__weak void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*htim)</code><br>
 定时器回调函数，一般在此判断中断来源并执行相应的用户操作</p>
 <blockquote>
-<p>一般在main.c中重定义，并编写不同中断内<br>
+<p>一般在main.c中重写，并编写不同中断内容<br>
 <code>void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) { if(htim == &amp;htim1){ } }</code></p>
 </blockquote>
 
