@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>[HAL] | Gridea</title>
-<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1609000641569">
+<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1609087675764">
 <link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Noo8ie.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="[HAL] | Gridea - Atom Feed" href="https://Noo8ie.github.io//atom.xml">
@@ -22,7 +22,7 @@ PinState: GPIO_PIN_RESET 低电平 GPIO..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://Noo8ie.github.io/">
-  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1609000641569" alt="">
+  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1609087675764" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -82,7 +82,7 @@ PinState: GPIO_PIN_RESET 低电平 GPIO..." />
                 2020-12-26
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
@@ -100,6 +100,9 @@ PinState: GPIO_PIN_RESET 低电平 GPIO_PIN_SET 高电平</p>
 </blockquote>
 <p><code>HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim)</code><br>
 使对应的定时器开始工作，但不开启中断服务</p>
+<blockquote>
+<p>开启PWM前开启此函数</p>
+</blockquote>
 <p><code>HAL_StatusTypeDef HAL_TIM_Base_Start_IT(TIM_HandleTypeDef *htim)</code><br>
 打开定时器，并开启中断服务</p>
 <p><code>void HAL_TIM_IRQHandler(TIM_HandleTypeDef *htim)</code><br>
@@ -113,6 +116,15 @@ PinState: GPIO_PIN_RESET 低电平 GPIO_PIN_SET 高电平</p>
 <p>一般在main.c中重写，并编写不同中断内容<br>
 <code>void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) { if(htim == &amp;htim1){ } }</code></p>
 </blockquote>
+<p><code>HAL_StatusTypeDef HAL_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel)</code><br>
+启用PWM，并且不用编写HAL_TIM_Base_Start和HAL_TIM_Base_Start_IT函数</p>
+<blockquote>
+<p>Prescaler(PSC):预分频系数<br>
+Counter Period(AutoReload Register/ARR):计数周期<br>
+Pulse:脉冲数(比较器参数)</p>
+</blockquote>
+<p><code>#define __HAL_TIM_SetCompare __HAL_TIM_SET_COMPARE #define __HAL_TIM_SET_COMPARE(__HANDLE__, __CHANNEL__, __COMPARE__)</code><br>
+PWM比较</p>
 
               </div>
               <div class="toc-container">
