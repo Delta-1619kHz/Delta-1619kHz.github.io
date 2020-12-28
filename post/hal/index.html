@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>[HAL] | Gridea</title>
-<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1609087675764">
+<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1609165098530">
 <link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Noo8ie.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="[HAL] | Gridea - Atom Feed" href="https://Noo8ie.github.io//atom.xml">
@@ -22,7 +22,7 @@ PinState: GPIO_PIN_RESET 低电平 GPIO..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://Noo8ie.github.io/">
-  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1609087675764" alt="">
+  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1609165098530" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -125,6 +125,12 @@ Pulse:脉冲数(比较器参数)</p>
 </blockquote>
 <p><code>#define __HAL_TIM_SetCompare __HAL_TIM_SET_COMPARE #define __HAL_TIM_SET_COMPARE(__HANDLE__, __CHANNEL__, __COMPARE__)</code><br>
 PWM比较</p>
+<p><code>GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDEf* GPIOx, uint16_t GPIO_Pin)</code><br>
+高电平返回GPIO_PIN_SET，低电平返回GPIO_PIN_RESET</p>
+<p><code>void HAL_EXTI_IRQHandler(uint16_t GPIO_Pin)</code><br>
+对中断类型进行判断，并对涉及中断的寄存器进行处理，调用中断回调函数，一般不对此进行操作</p>
+<p><code>__weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)</code><br>
+中断回调函数，不需要编写任何前置函数，在此编写此次中断需执行的操作</p>
 
               </div>
               <div class="toc-container">

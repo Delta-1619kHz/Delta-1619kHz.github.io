@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-12-27T16:48:04.243Z</updated>
+    <updated>2020-12-28T14:18:20.390Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
@@ -52,6 +52,12 @@ Pulse:脉冲数(比较器参数)</p>
 </blockquote>
 <p><code>#define __HAL_TIM_SetCompare __HAL_TIM_SET_COMPARE #define __HAL_TIM_SET_COMPARE(__HANDLE__, __CHANNEL__, __COMPARE__)</code><br>
 PWM比较</p>
+<p><code>GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDEf* GPIOx, uint16_t GPIO_Pin)</code><br>
+高电平返回GPIO_PIN_SET，低电平返回GPIO_PIN_RESET</p>
+<p><code>void HAL_EXTI_IRQHandler(uint16_t GPIO_Pin)</code><br>
+对中断类型进行判断，并对涉及中断的寄存器进行处理，调用中断回调函数，一般不对此进行操作</p>
+<p><code>__weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)</code><br>
+中断回调函数，不需要编写任何前置函数，在此编写此次中断需执行的操作</p>
 ]]></content>
     </entry>
     <entry>
