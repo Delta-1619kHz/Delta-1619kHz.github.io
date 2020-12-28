@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-12-28T14:18:20.390Z</updated>
+    <updated>2020-12-28T17:47:00.789Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
@@ -61,22 +61,22 @@ PWM比较</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[数字电子技术]]></title>
+        <title type="html"><![CDATA[[数字电子技术]逻辑代数]]></title>
         <id>https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu</id>
         <link href="https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu">
         </link>
         <updated>2020-12-24T16:13:29.000Z</updated>
         <content type="html"><![CDATA[<h1 id="基本运算">基本运算</h1>
-<p>与或非<br>
-=与-<br>
+<h2 id="与或非">与或非</h2>
+<p>=与-<br>
 |<br>
 =或-非-<br>
 |<br>
-=与-<br>
-异或<br>
-A ⊕ B=A · B' + A' · B<br>
-同或<br>
-A ⊙ B=A · B + A' · B'<br>
+=与-</p>
+<h2 id="异或">异或</h2>
+<p>A ⊕ B=A · B' + A' · B</p>
+<h2 id="同或">同或</h2>
+<p>A ⊙ B=A · B + A' · B'<br>
 A、B同，Y为1，不同为0</p>
 <h1 id="逻辑代数公式">逻辑代数公式</h1>
 <table>
@@ -146,7 +146,8 @@ A、B同，Y为1，不同为0</p>
 </tbody>
 </table>
 <blockquote>
-<p>4与14互补，5和15交换律，6和16结合律，7和17分配律<br>
+<p>主要是非运算引起的不同<br>
+4与14互补，5和15交换律，6和16结合律，7和17分配律<br>
 实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有限呢</s></p>
 </blockquote>
 <h2 id="常用公式">常用公式</h2>
@@ -188,6 +189,24 @@ A、B同，Y为1，不同为0</p>
 </tr>
 </tbody>
 </table>
+<h1 id="基本定理">基本定理</h1>
+<h2 id="代入定理">代入定理</h2>
+<p>可直接将一个逻辑式将一个式子中的一个变量全部替换</p>
+<blockquote>
+<p>其实逻辑运算仍需要与普通运算一样遵照运算优先级，先括号，次并，最后或<br>
+对整个乘积项或者逻辑式求反，须对整个内容看作整体求反</p>
+</blockquote>
+<h2 id="反演定理">反演定理</h2>
+<p>与变或，或变与，1变0，0变1，原变反，反变原，得到Y'</p>
+<blockquote>
+<p>在进行反演时，仍须遵照运算优先级进行反演<br>
+整体的非不变</p>
+</blockquote>
+<h2 id="对偶定理">对偶定理</h2>
+<p>一个式子经过与变或，或变与，1变0，0变1，得到对偶式Y^D，对偶式相等的两逻辑式相等</p>
+<blockquote>
+<p>得到对偶就是反演的情况下不取反</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
