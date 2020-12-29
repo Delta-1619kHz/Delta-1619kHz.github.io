@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-12-29T08:58:34.013Z</updated>
+    <updated>2020-12-29T10:13:22.226Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
@@ -77,7 +77,7 @@ PWM比较</p>
 <p>A ⊕ B=A · B' + A' · B</p>
 <h2 id="同或">同或</h2>
 <p>A ⊙ B=A · B + A' · B'<br>
-A、B同，Y为1，不同为0</p>
+A、B同，Y为<strong>1</strong>，不同为<strong>0</strong></p>
 <h1 id="逻辑代数公式">逻辑代数公式</h1>
 <table>
 <thead>
@@ -91,25 +91,25 @@ A、B同，Y为1，不同为0</p>
 <tbody>
 <tr>
 <td>1</td>
-<td>0 · A = 0</td>
+<td><strong>0</strong> · A = <strong>0</strong></td>
 <td>10</td>
-<td>1' = 0; 0' = 1</td>
+<td><strong>1</strong>' = <strong>0</strong>; <strong>0</strong>' = <strong>1</strong></td>
 </tr>
 <tr>
 <td>2</td>
-<td>1 · A = A</td>
+<td><strong>1</strong> · A = A</td>
 <td>11</td>
-<td>1+A = 1</td>
+<td><strong>1</strong>+A = <strong>1</strong></td>
 </tr>
 <tr>
 <td>3</td>
 <td>A · A = A</td>
 <td>12</td>
-<td>0+A = A</td>
+<td><strong>0</strong>+A = A</td>
 </tr>
 <tr>
 <td>4</td>
-<td>A · A' = 0</td>
+<td>A · A' = <strong>0</strong></td>
 <td>13</td>
 <td>A+A = A</td>
 </tr>
@@ -117,7 +117,7 @@ A、B同，Y为1，不同为0</p>
 <td>5</td>
 <td>A · B = B</td>
 <td>14</td>
-<td>A+A' = 1</td>
+<td>A+A' = <strong>1</strong></td>
 </tr>
 <tr>
 <td>6</td>
@@ -197,23 +197,38 @@ A、B同，Y为1，不同为0</p>
 对整个乘积项或者逻辑式求反，须对整个内容看作整体求反</p>
 </blockquote>
 <h2 id="反演定理">反演定理</h2>
-<p>与变或，或变与，1变0，0变1，原变反，反变原，得到Y'</p>
+<p>与变或，或变与，<strong>1</strong>变<strong>0</strong>，<strong>0</strong>变<strong>1</strong>，原变反，反变原，得到Y'</p>
 <blockquote>
 <p>在进行反演时，仍须遵照运算优先级进行反演<br>
 整体的非不变</p>
 </blockquote>
 <h2 id="对偶定理">对偶定理</h2>
-<p>一个式子经过与变或，或变与，1变0，0变1，得到对偶式Y^D，对偶式相等的两逻辑式相等</p>
+<p>一个式子经过与变或，或变与，<strong>1</strong>变<strong>0</strong>，<strong>0</strong>变<strong>1</strong>，得到对偶式Y^D，对偶式相等的两逻辑式相等</p>
 <blockquote>
 <p>得到对偶就是反演的情况下不取反</p>
 </blockquote>
 <h1 id="逻辑函数">逻辑函数</h1>
 <h2 id="真值表-逻辑函数式">真值表-&gt;逻辑函数式</h2>
-<ol>
-<li>找出真值表中使Y=1的输入变量取值的组合</li>
-<li>每组输入变量取值对应一个乘积项，取值为1的变量取原，取值为0的变量取反</li>
+<ul>
+<li>找出真值表中使Y=<strong>1</strong>的输入变量取值的组合</li>
+<li>每组输入变量取值对应一个乘积项，取值为<strong>1</strong>的变量取原，取值为<strong>0</strong>的变量取反</li>
 <li>将这些乘积项或得到逻辑函数的一般形式 <s>我猜的这是一般形式</s></li>
-</ol>
+</ul>
+<h2 id="逻辑函数标准形式">逻辑函数标准形式</h2>
+<h3 id="最小项与最大项">最小项与最大项</h3>
+<p>最小项：n个变量的乘积项中，每个变量均以原或反的形式出现一次<br>
+将原看作<strong>1</strong>，反看作<strong>0</strong>，得到最小项的二进制编号</p>
+<ul>
+<li>在输入变脸的任何取值下必有一个最小项，而且仅有一个最小项的值为<strong>1</strong></li>
+<li>全体最小项之和为<strong>1</strong></li>
+<li>任意两个最小项的乘积为<strong>0</strong></li>
+<li>具有相邻性的两个最小项之和可以合并成一项并消去一对因子</li>
+</ul>
+<blockquote>
+<p>这里是指不同取值情况下的一种情况<br>
+具有相邻性是指只有一个因子不同，如：A'BC' + ABC' = (A' + A)BC' = BC'<br>
+最大项：</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
