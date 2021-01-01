@@ -2,14 +2,62 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-12-29T13:28:30.708Z</updated>
+    <updated>2021-01-01T09:44:56.440Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
     <subtitle>&lt;论废物的自我修养&gt;</subtitle>
     <logo>https://Noo8ie.github.io/images/avatar.png</logo>
     <icon>https://Noo8ie.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[[数字电子技术]数制和码制]]></title>
+        <id>https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu-shu-zhi-he-ma-zhi</id>
+        <link href="https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu-shu-zhi-he-ma-zhi">
+        </link>
+        <updated>2020-12-31T15:34:24.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="数制转换">数制转换</h1>
+<p>二进制类型分为二进制数、八进制数和十六进制数<br>
+十进制类型分为十进制数和BCD码<br>
+二进制类型和十进制类型之间为真正意义上的数值转换，而类型内的转换为形式变换</p>
+<p>八进制转十六进制，先二进制</p>
+<h1 id="八-十六进制由来">八、十六进制由来</h1>
+<p>二进制数位压缩，增强可读性<br>
+十进制数位延展</p>
+<h1 id="原码-反码和补码">原码、反码和补码</h1>
+<p>正数原、反、补码相等<br>
+负数反码为原码按位取反，补码为原码取反加一</p>
+<h1 id="bcd码">BCD码</h1>
+<p>1位十进制数用4位二进制码元表示<br>
+BCD码是十进制数</p>
+<h2 id="8421码">8421码</h2>
+<p>明码，有权值码</p>
+<h2 id="余3码">余3码</h2>
+<p>8421码加3，明码，非权值码</p>
+<h2 id="2421码">2421码</h2>
+<p>有权值码，暗码(编码方案不唯一)</p>
+<h2 id="5421码">5421码</h2>
+<p>有权值码，明码(但5、6编码不唯一⭐️)</p>
+<h2 id="5211码">5211码</h2>
+<p>有权值码</p>
+<h1 id="可靠性代码">可靠性代码</h1>
+<h2 id="格雷码单位距离码">格雷码(单位距离码)</h2>
+<p>非权值码，相邻码元之间仅有一位码元，暗码<br>
+相邻代码变化平滑，无&quot;过渡噪声&quot;</p>
+<h2 id="奇偶校验码">奇偶校验码</h2>
+<p>信息位 + 校验位(仅有一位)<br>
+奇、偶校验码都是明码，生成的码也为明码</p>
+<ul>
+<li>五位码元中，1的个数为奇数</li>
+<li>五位码元中，1的个数为偶数<br>
+只能检奇数个错，不能纠错</li>
+</ul>
+<p>#字符代码<br>
+狭义：数字、英文字母和一些专用符号<br>
+广义：为了表达数字、英文字母等字符，所设计的字符编码系统和编码方式<br>
+ASCII码：7位代码</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[HAL]]]></title>
         <id>https://Noo8ie.github.io/post/hal</id>
@@ -73,11 +121,20 @@ PWM比较</p>
 =或-非-<br>
 |<br>
 =与-</p>
-<h2 id="异或">异或</h2>
+<h2 id="两输入异或-同或">两输入异或、同或</h2>
+<p>2输入异或、同或互为反函数，非</p>
+<h3 id="异或模2加">异或(模2加)</h3>
 <p>A ⊕ B=A · B' + A' · B</p>
-<h2 id="同或">同或</h2>
+<h3 id="同或符合逻辑异或非">同或(&quot;符合&quot;逻辑/异或非)</h3>
 <p>A ⊙ B=A · B + A' · B'<br>
 A、B同，Y为<strong>1</strong>，不同为<strong>0</strong></p>
+<h1 id="n输入异或">n输入异或</h1>
+<p>奇数<strong>1</strong>，输入出<strong>1</strong></p>
+<h1 id="n输入异或-同或关系">n输入异或、同或关系</h1>
+<p>n为偶数，异或、同或互为非关系，异或检奇，同或检偶<br>
+n为奇数，异或、同或相同，都检奇</p>
+<h1 id="奇偶校验码的生成与检测">奇偶校验码的生成与检测</h1>
+<p>生成与检测都用异或电路，正常输出检测信号为<strong>0</strong></p>
 <h1 id="逻辑代数公式">逻辑代数公式</h1>
 <table>
 <thead>
@@ -148,7 +205,7 @@ A、B同，Y为<strong>1</strong>，不同为<strong>0</strong></p>
 <blockquote>
 <p>主要是非运算引起的不同<br>
 4与14互补，5和15交换律，6和16结合律，7和17分配律<br>
-实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有限呢</s></p>
+实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有序呢</s></p>
 </blockquote>
 <h2 id="常用公式">常用公式</h2>
 <table>
@@ -269,6 +326,83 @@ A、B同，Y为<strong>1</strong>，不同为<strong>0</strong></p>
 <li>输出线：有刷两根、无刷三根</li>
 <li>信号线：最细线</li>
 </ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Java]]]></title>
+        <id>https://Noo8ie.github.io/post/java</id>
+        <link href="https://Noo8ie.github.io/post/java">
+        </link>
+        <updated>2020-12-13T10:25:56.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="数据类型">数据类型</h1>
+<p>转换必须满足如下规则：</p>
+<ol>
+<li>
+<p>不能对boolean类型进行类型转换。</p>
+</li>
+<li>
+<p>不能把对象类型转换成不相关类的对象。</p>
+</li>
+<li>
+<p>在把容量大的类型转换为容量小的类型时必须使用强制类型转换。⭐️</p>
+</li>
+<li>
+<p>转换过程中可能导致溢出或损失精度。</p>
+</li>
+</ol>
+<p>隐含强制类型转换</p>
+<ol>
+<li>
+<p>整数的默认类型是 int。</p>
+</li>
+<li>
+<p>浮点型不存在这种情况，因为在定义 float 类型时必须在数字后面跟上 F 或<br>
+者 f。</p>
+</li>
+</ol>
+<p>将 boolean 转换为 int<br>
+唯一的方法：<br>
+int myInt = myBoolean ? 1 : 0;</p>
+<h1 id="静态方法static">静态方法static</h1>
+<p>在不创建对象的情况下调用某个方法，就可以将这个方法设置为static，不能访问非静态成员/方法</p>
+<blockquote>
+<p>非静态方法可以访问静态成员/方法</p>
+</blockquote>
+<h1 id="静态变量static">静态变量static</h1>
+<p>静态变量除了能在定义它的类内存取，还能直接以“类名.静态变量”的方式在其它类内使用。</p>
+<blockquote>
+<p>static不能用来修饰局部变量</p>
+</blockquote>
+<h1 id="按位运算">按位运算^</h1>
+<p>相同取0，不同取1<br>
+A = 0011 1100<br>
+B = 0000 1101<br>
+A ^ B = 0011 0001</p>
+<h1 id="stringbuffer-和-stringbuiler">StringBuffer 和 StringBuiler</h1>
+<figure data-type="image" tabindex="1"><img src="https://Noo8ie.github.io//post-images/1608310204032.png" alt="" loading="lazy"></figure>
+<h1 id="数组">数组</h1>
+<p>增强型for循环<br>
+<code>for(type element:array){};</code><br>
+式中，type为数组array的类型；element是用来存放数组中元素的临时变量；array是待操作的数组。<br>
+作用是：<br>
+对数组中的数据依次进行存取。代码的功能是：每次从数组中取出元素[i]，并自动设定给p，不用判断是否超出了数组的长度。<br>
+优点：<br>
+每次从数组array中取数据，会自动赋给变量element，并且不用编译器判断是否超出了数组的长度。也即省去了标准for语句里的判决条件，如”i&lt;=array.length“。<br>
+equals和==区别</p>
+<h1 id="接口interface">接口interface</h1>
+<p>接口中的方法会被隐式地指定为public abstract(只能是)<br>
+接口中只能有static和final变量<br>
+可多继承</p>
+<blockquote>
+<p>jdk15环境变量<br>
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath<br>
+C:\Program Files\Common Files\Oracle\Java\javapath</p>
+</blockquote>
+<blockquote>
+<p>jdk8环境变量<br>
+JAVA_HOME<br>
+CLASSPATH .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>

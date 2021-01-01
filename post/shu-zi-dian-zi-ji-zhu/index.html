@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>[数字电子技术]逻辑代数 | Gridea</title>
-<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1609236798908">
+<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1609494294329">
 <link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Noo8ie.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="[数字电子技术]逻辑代数 | Gridea - Atom Feed" href="https://Noo8ie.github.io//atom.xml">
@@ -18,25 +18,12 @@
 =或-非-
 |
 =与-
-异或
+两输入异或、同或
+2输入异或、同或互为反函数，非
+异或(模2加)
 A ⊕ B=A · B' + A' · B
-同或
-A ⊙ B=A · B + A' · B'
-A、B同，Y为1，不同为0
-逻辑代数公式
-
-
-
-序号
-公式
-序号
-公式
-
-
-
-
-1
-0..." />
+同或(&quot;符合&quot;逻辑/异或非)
+A ⊙ B=A · B +..." />
     <meta name="keywords" content="Eletronic" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -46,7 +33,7 @@ A、B同，Y为1，不同为0
       <div class="main-content">
         <div class="site-header">
   <a href="https://Noo8ie.github.io/">
-  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1609236798908" alt="">
+  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1609494294329" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -106,7 +93,7 @@ A、B同，Y为1，不同为0
                 2020-12-25
               </span>
               <span>
-                3 min read
+                4 min read
               </span>
               
                 <a href="https://Noo8ie.github.io/tag/cMSUCuh7o" class="post-tag">
@@ -124,11 +111,20 @@ A、B同，Y为1，不同为0
 =或-非-<br>
 |<br>
 =与-</p>
-<h2 id="异或">异或</h2>
+<h2 id="两输入异或-同或">两输入异或、同或</h2>
+<p>2输入异或、同或互为反函数，非</p>
+<h3 id="异或模2加">异或(模2加)</h3>
 <p>A ⊕ B=A · B' + A' · B</p>
-<h2 id="同或">同或</h2>
+<h3 id="同或符合逻辑异或非">同或(&quot;符合&quot;逻辑/异或非)</h3>
 <p>A ⊙ B=A · B + A' · B'<br>
 A、B同，Y为<strong>1</strong>，不同为<strong>0</strong></p>
+<h1 id="n输入异或">n输入异或</h1>
+<p>奇数<strong>1</strong>，输入出<strong>1</strong></p>
+<h1 id="n输入异或-同或关系">n输入异或、同或关系</h1>
+<p>n为偶数，异或、同或互为非关系，异或检奇，同或检偶<br>
+n为奇数，异或、同或相同，都检奇</p>
+<h1 id="奇偶校验码的生成与检测">奇偶校验码的生成与检测</h1>
+<p>生成与检测都用异或电路，正常输出检测信号为<strong>0</strong></p>
 <h1 id="逻辑代数公式">逻辑代数公式</h1>
 <table>
 <thead>
@@ -199,7 +195,7 @@ A、B同，Y为<strong>1</strong>，不同为<strong>0</strong></p>
 <blockquote>
 <p>主要是非运算引起的不同<br>
 4与14互补，5和15交换律，6和16结合律，7和17分配律<br>
-实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有限呢</s></p>
+实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有序呢</s></p>
 </blockquote>
 <h2 id="常用公式">常用公式</h2>
 <table>
@@ -287,10 +283,17 @@ A、B同，Y为<strong>1</strong>，不同为<strong>0</strong></p>
 <li><a href="#%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97">基本运算</a>
 <ul>
 <li><a href="#%E4%B8%8E%E6%88%96%E9%9D%9E">与或非</a></li>
-<li><a href="#%E5%BC%82%E6%88%96">异或</a></li>
-<li><a href="#%E5%90%8C%E6%88%96">同或</a></li>
+<li><a href="#%E4%B8%A4%E8%BE%93%E5%85%A5%E5%BC%82%E6%88%96-%E5%90%8C%E6%88%96">两输入异或、同或</a>
+<ul>
+<li><a href="#%E5%BC%82%E6%88%96%E6%A8%A12%E5%8A%A0">异或(模2加)</a></li>
+<li><a href="#%E5%90%8C%E6%88%96%E7%AC%A6%E5%90%88%E9%80%BB%E8%BE%91%E5%BC%82%E6%88%96%E9%9D%9E">同或(&quot;符合&quot;逻辑/异或非)</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#n%E8%BE%93%E5%85%A5%E5%BC%82%E6%88%96">n输入异或</a></li>
+<li><a href="#n%E8%BE%93%E5%85%A5%E5%BC%82%E6%88%96-%E5%90%8C%E6%88%96%E5%85%B3%E7%B3%BB">n输入异或、同或关系</a></li>
+<li><a href="#%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C%E7%A0%81%E7%9A%84%E7%94%9F%E6%88%90%E4%B8%8E%E6%A3%80%E6%B5%8B">奇偶校验码的生成与检测</a></li>
 <li><a href="#%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0%E5%85%AC%E5%BC%8F">逻辑代数公式</a>
 <ul>
 <li><a href="#%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F">常用公式</a></li>
