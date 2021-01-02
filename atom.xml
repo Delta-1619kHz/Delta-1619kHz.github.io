@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-01-01T18:11:54.145Z</updated>
+    <updated>2021-01-02T16:24:09.065Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
@@ -246,7 +246,8 @@ n为奇数，异或、同或相同，都检奇</p>
 </tr>
 </tbody>
 </table>
-<p>21、22、23为吸收定理，21为卡诺图原理</p>
+<p>21、22、23为吸收定律，21为卡诺图原理<br>
+25为多余项定律</p>
 <h1 id="基本定理">基本定理</h1>
 <h2 id="代入定理">代入定理</h2>
 <p>可直接将一个逻辑式将一个式子中的一个变量全部替换</p>
