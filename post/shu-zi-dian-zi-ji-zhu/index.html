@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>[数字电子技术]逻辑代数 | Gridea</title>
-<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1609604641969">
+<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1609698968356">
 <link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Noo8ie.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="[数字电子技术]逻辑代数 | Gridea - Atom Feed" href="https://Noo8ie.github.io//atom.xml">
@@ -33,7 +33,7 @@ A ⊙ B=A · B +..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://Noo8ie.github.io/">
-  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1609604641969" alt="">
+  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1609698968356" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -195,7 +195,8 @@ n为奇数，异或、同或相同，都检奇</p>
 <blockquote>
 <p>主要是非运算引起的不同<br>
 4与14互补，5和15交换律，6和16结合律，7和17分配律<br>
-实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有序呢</s></p>
+实质是输出相同归类，8和18反演(De.Morgan)，真值表并不相同<s>⭐️看起来太扯了,所以到底有没有运算有序呢</s><br>
+<img src="https://Noo8ie.github.io//post-images/1609697487950.png" alt="" loading="lazy"></p>
 </blockquote>
 <h2 id="常用公式">常用公式</h2>
 <table>
@@ -237,7 +238,7 @@ n为奇数，异或、同或相同，都检奇</p>
 </tbody>
 </table>
 <p>21、22、23为吸收定律，21为卡诺图原理<br>
-25为多余项定律</p>
+25为多余项定律，此定理难点为判断是否化为最简</p>
 <h1 id="基本定理">基本定理</h1>
 <h2 id="代入定理">代入定理</h2>
 <p>可直接将一个逻辑式将一个式子中的一个变量全部替换</p>
@@ -248,15 +249,24 @@ n为奇数，异或、同或相同，都检奇</p>
 <h2 id="反演定理">反演定理</h2>
 <p>与变或，或变与，<strong>1</strong>变<strong>0</strong>，<strong>0</strong>变<strong>1</strong>，原变反，反变原，得到Y'</p>
 <blockquote>
-<p>在进行反演时，仍须遵照运算优先级进行反演<br>
+<p>在进行反演时，仍须遵照运算优先级进行反演，从优先级最低开始反演，异或、同或优先级相同，低于与，高于或⭐️<br>
 整体的非不变</p>
 </blockquote>
 <h2 id="对偶定理">对偶定理</h2>
 <p>一个式子经过与变或，或变与，<strong>1</strong>变<strong>0</strong>，<strong>0</strong>变<strong>1</strong>，得到对偶式Y^D，对偶式相等的两逻辑式相等</p>
 <blockquote>
-<p>得到对偶就是反演的情况下不取反</p>
+<p>得到对偶就是反演的情况下不取反<br>
+n输入异或、同或始终互为同或</p>
 </blockquote>
 <h1 id="逻辑函数">逻辑函数</h1>
+<h2 id="五类基本形式">五类基本形式</h2>
+<ul>
+<li>与或式</li>
+<li>或非-与非式</li>
+<li>或与式</li>
+<li>或非-或非式</li>
+<li>与或非式</li>
+</ul>
 <h2 id="真值表-逻辑函数式">真值表-&gt;逻辑函数式</h2>
 <ul>
 <li>找出真值表中使Y=<strong>1</strong>的输入变量取值的组合</li>
@@ -310,6 +320,7 @@ n为奇数，异或、同或相同，都检奇</p>
 </li>
 <li><a href="#%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0">逻辑函数</a>
 <ul>
+<li><a href="#%E4%BA%94%E7%B1%BB%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F">五类基本形式</a></li>
 <li><a href="#%E7%9C%9F%E5%80%BC%E8%A1%A8-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E5%BC%8F">真值表-&gt;逻辑函数式</a></li>
 <li><a href="#%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F">逻辑函数标准形式</a>
 <ul>
