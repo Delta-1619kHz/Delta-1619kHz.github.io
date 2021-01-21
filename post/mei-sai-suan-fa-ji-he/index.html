@@ -1,0 +1,295 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>[美赛]算法集合 | Gridea</title>
+<link rel="shortcut icon" href="https://Noo8ie.github.io//favicon.ico?v=1611250255499">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://Noo8ie.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="[美赛]算法集合 | Gridea - Atom Feed" href="https://Noo8ie.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="线性、非线性
+静态、动态
+整数、非整数
+随机、非随机
+#最优化数学模型分类
+线性规划(LP):目标函数和决策变量均为线性
+非线性规划(NLP)
+二次规划(QP):次数项不止一个
+整数规划(IP):决策变量为整数
+0-1规划:决策变量仅取值0..." />
+    <meta name="keywords" content="Algorithm" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://Noo8ie.github.io/">
+  <img class="avatar" src="https://Noo8ie.github.io//images/avatar.png?v=1611250255499" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    <论废物的自我修养>
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              [美赛]算法集合
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-01-21
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://Noo8ie.github.io/tag/17EFLT6eT" class="post-tag">
+                  # Algorithm
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>线性、非线性<br>
+静态、动态<br>
+整数、非整数<br>
+随机、非随机</p>
+<p>#最优化数学模型分类<br>
+线性规划(LP):目标函数和决策变量均为线性<br>
+非线性规划(NLP)<br>
+二次规划(QP):次数项不止一个<br>
+整数规划(IP):决策变量为整数<br>
+0-1规划:决策变量仅取值0或1的特殊整数规划<br>
+多目标规划:目标函数多于一个<br>
+动态规划:规划过程分段</p>
+<h1 id="线性规划模型">线性规划模型</h1>
+<p>决策变量<br>
+约束条件<br>
+目标函数</p>
+<p>min c'x x∈Rn<br>
+s.t. Ax &lt;= b<br>
+Aeq·x = beq<br>
+VLB &lt;= x &lt;= VUB</p>
+<blockquote>
+<p>b, c, x, beq, VLB, VUB为列矩阵</p>
+</blockquote>
+<p>Matlab:<br>
+x = linprog(c, A, b, Aeq, beq, VLB, VUB)<br>
+x最优解，c目标函数，A、b不等式约束，Aeq，beq等式约束，VLB，VUB决策变量上下界</p>
+<blockquote>
+<p>无等式约束，输入[]</p>
+</blockquote>
+<p>[x, fval, exitflag, output] = linprog(c, A, b, Aeq, beq, VLB, VUB)<br>
+fval最优值</p>
+<blockquote>
+<p>exitflag有三种情况，&gt;0收敛，=0到最大迭代次数时都还未收敛，&lt;0infeasible或方法失败</p>
+</blockquote>
+<h1 id="插值与拟合">插值与拟合</h1>
+<h2 id="插值方法">插值方法：</h2>
+<ul>
+<li>拉格朗日插值(lagrange插值)</li>
+<li>分段线性插值</li>
+<li>Hermite</li>
+<li>三次样条插值</li>
+<li>Kriging:地理常用插值</li>
+<li>反距离权重插值:地理常用插值</li>
+</ul>
+<p>Matlab:<br>
+interp1(一维插值)：<br>
+interp1(x, y, xi, 'method')<br>
+x样本点(x单调)，y样本值，xi查询点<br>
+'method':</p>
+<ul>
+<li>'nearest' 最临近插值</li>
+<li>'linear' 线性插值</li>
+<li>'spline' 三次样条插值</li>
+<li>'cubic' 立方插值</li>
+<li>缺省时 分段线性插值</li>
+</ul>
+<blockquote>
+<p>三次样条插值较多</p>
+</blockquote>
+<p>interp2(二维):<br>
+interp2(x0, y0, z0, x, y, 'method')<br>
+'method':</p>
+<ul>
+<li>'nearest' 最临近插值</li>
+<li>'linear' 双线性插值</li>
+<li>'cubic' 双三次插值</li>
+<li>缺省时 双线性插值</li>
+</ul>
+<p>griddata(散点数据插值):<br>
+griddata(x, y, z, cx, cy, 'method')<br>
+cx, cy需为网格点: [cx, cy] = meshgrid(cx, cy)<br>
+'method':</p>
+<ul>
+<li>'nearest' 最邻近插值</li>
+<li>'linear' 双线性插值</li>
+<li>'cubic' 双三次插值</li>
+<li>'v4' - MatLab提供的插值方法</li>
+<li>缺省时 双线性插值</li>
+</ul>
+<p>interp3(三维)<br>
+intern(n维)</p>
+<h2 id="拟合方法">拟合方法</h2>
+<p>直线拟合<br>
+y = ax+b</p>
+<p>曲线拟合<br>
+y = a*e^(bt) -&gt; lny = lna + bx</p>
+<p>线性最小二乘法：</p>
+<ol>
+<li>选定个数为m的函数组，a1,a2,...,am为各项系数</li>
+<li>使n个点与曲线的距离平方和最小</li>
+</ol>
+<p>MatLab:<br>
+a = polyfit(x, y, m)<br>
+m拟合次数<br>
+y = polyval(a, x)<br>
+x处值</p>
+<h1 id="非线性规划模型">非线性规划模型</h1>
+<h1 id="0-1规划问题">0-1规划问题</h1>
+<p>Max(Min)z = c1x1+c2x2+...+cnx<br>
+a11x1+a12x2+...+a1nxn&lt;=(&gt;=,=)b1<br>
+......<br>
+am1x1+am2x2+...+amnxn&lt;=(&gt;=,=)bm<br>
+x1,x2,...,xn=0|1</p>
+<h1 id="动态规划">动态规划</h1>
+<p>将变量拆分x=x1+x2+x3<br>
+LINGO函数</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E6%A8%A1%E5%9E%8B">线性规划模型</a></li>
+<li><a href="#%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88">插值与拟合</a>
+<ul>
+<li><a href="#%E6%8F%92%E5%80%BC%E6%96%B9%E6%B3%95">插值方法：</a></li>
+<li><a href="#%E6%8B%9F%E5%90%88%E6%96%B9%E6%B3%95">拟合方法</a></li>
+</ul>
+</li>
+<li><a href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E6%A8%A1%E5%9E%8B">非线性规划模型</a></li>
+<li><a href="#0-1%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98">0-1规划问题</a></li>
+<li><a href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">动态规划</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu-men-dian-lu">
+              <h3 class="post-title">
+                [数字电子技术]门电路
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://Noo8ie.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

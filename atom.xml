@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Noo8ie.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-01-03T18:36:10.506Z</updated>
+    <updated>2021-01-21T17:31:11.734Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Noo8ie.github.io/"/>
     <link rel="self" href="https://Noo8ie.github.io/atom.xml"/>
@@ -10,6 +10,120 @@
     <logo>https://Noo8ie.github.io/images/avatar.png</logo>
     <icon>https://Noo8ie.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[[美赛]算法集合]]></title>
+        <id>https://Noo8ie.github.io/post/mei-sai-suan-fa-ji-he</id>
+        <link href="https://Noo8ie.github.io/post/mei-sai-suan-fa-ji-he">
+        </link>
+        <updated>2021-01-20T17:02:12.000Z</updated>
+        <content type="html"><![CDATA[<p>线性、非线性<br>
+静态、动态<br>
+整数、非整数<br>
+随机、非随机</p>
+<p>#最优化数学模型分类<br>
+线性规划(LP):目标函数和决策变量均为线性<br>
+非线性规划(NLP)<br>
+二次规划(QP):次数项不止一个<br>
+整数规划(IP):决策变量为整数<br>
+0-1规划:决策变量仅取值0或1的特殊整数规划<br>
+多目标规划:目标函数多于一个<br>
+动态规划:规划过程分段</p>
+<h1 id="线性规划模型">线性规划模型</h1>
+<p>决策变量<br>
+约束条件<br>
+目标函数</p>
+<p>min c'x x∈Rn<br>
+s.t. Ax &lt;= b<br>
+Aeq·x = beq<br>
+VLB &lt;= x &lt;= VUB</p>
+<blockquote>
+<p>b, c, x, beq, VLB, VUB为列矩阵</p>
+</blockquote>
+<p>Matlab:<br>
+x = linprog(c, A, b, Aeq, beq, VLB, VUB)<br>
+x最优解，c目标函数，A、b不等式约束，Aeq，beq等式约束，VLB，VUB决策变量上下界</p>
+<blockquote>
+<p>无等式约束，输入[]</p>
+</blockquote>
+<p>[x, fval, exitflag, output] = linprog(c, A, b, Aeq, beq, VLB, VUB)<br>
+fval最优值</p>
+<blockquote>
+<p>exitflag有三种情况，&gt;0收敛，=0到最大迭代次数时都还未收敛，&lt;0infeasible或方法失败</p>
+</blockquote>
+<h1 id="插值与拟合">插值与拟合</h1>
+<h2 id="插值方法">插值方法：</h2>
+<ul>
+<li>拉格朗日插值(lagrange插值)</li>
+<li>分段线性插值</li>
+<li>Hermite</li>
+<li>三次样条插值</li>
+<li>Kriging:地理常用插值</li>
+<li>反距离权重插值:地理常用插值</li>
+</ul>
+<p>Matlab:<br>
+interp1(一维插值)：<br>
+interp1(x, y, xi, 'method')<br>
+x样本点(x单调)，y样本值，xi查询点<br>
+'method':</p>
+<ul>
+<li>'nearest' 最临近插值</li>
+<li>'linear' 线性插值</li>
+<li>'spline' 三次样条插值</li>
+<li>'cubic' 立方插值</li>
+<li>缺省时 分段线性插值</li>
+</ul>
+<blockquote>
+<p>三次样条插值较多</p>
+</blockquote>
+<p>interp2(二维):<br>
+interp2(x0, y0, z0, x, y, 'method')<br>
+'method':</p>
+<ul>
+<li>'nearest' 最临近插值</li>
+<li>'linear' 双线性插值</li>
+<li>'cubic' 双三次插值</li>
+<li>缺省时 双线性插值</li>
+</ul>
+<p>griddata(散点数据插值):<br>
+griddata(x, y, z, cx, cy, 'method')<br>
+cx, cy需为网格点: [cx, cy] = meshgrid(cx, cy)<br>
+'method':</p>
+<ul>
+<li>'nearest' 最邻近插值</li>
+<li>'linear' 双线性插值</li>
+<li>'cubic' 双三次插值</li>
+<li>'v4' - MatLab提供的插值方法</li>
+<li>缺省时 双线性插值</li>
+</ul>
+<p>interp3(三维)<br>
+intern(n维)</p>
+<h2 id="拟合方法">拟合方法</h2>
+<p>直线拟合<br>
+y = ax+b</p>
+<p>曲线拟合<br>
+y = a*e^(bt) -&gt; lny = lna + bx</p>
+<p>线性最小二乘法：</p>
+<ol>
+<li>选定个数为m的函数组，a1,a2,...,am为各项系数</li>
+<li>使n个点与曲线的距离平方和最小</li>
+</ol>
+<p>MatLab:<br>
+a = polyfit(x, y, m)<br>
+m拟合次数<br>
+y = polyval(a, x)<br>
+x处值</p>
+<h1 id="非线性规划模型">非线性规划模型</h1>
+<h1 id="0-1规划问题">0-1规划问题</h1>
+<p>Max(Min)z = c1x1+c2x2+...+cnx<br>
+a11x1+a12x2+...+a1nxn&lt;=(&gt;=,=)b1<br>
+......<br>
+am1x1+am2x2+...+amnxn&lt;=(&gt;=,=)bm<br>
+x1,x2,...,xn=0|1</p>
+<h1 id="动态规划">动态规划</h1>
+<p>将变量拆分x=x1+x2+x3<br>
+LINGO函数</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[数字电子技术]门电路]]></title>
         <id>https://Noo8ie.github.io/post/shu-zi-dian-zi-ji-zhu-men-dian-lu</id>
