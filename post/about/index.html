@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://noo8ie.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://noo8ie.github.io/styles/main.css">
     
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/dracula.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
@@ -24,16 +24,41 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
     <!-- 数学公式 -->
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+        </script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            },
+            {
+                left: "$",
+                right: "$",
+                display: false
+            }
+            ]
+        });
+    </script>
+    
     <title>Gridea</title>
     
     <style>
         .markdownIt-TOC {
+            margin-left: 28%;
             padding-left: 2px;
-            width: 100%;
+            width: 80%;
         }
 
         .markdownIt-TOC li {
-            padding-left: 2%;
+            padding-left: 8%;
         }
     </style>
     
@@ -142,7 +167,12 @@
         
         
         
+        <li><a data-pjax href="https://noo8ie.github.io/talk">说说</a></li>
+        
           
+        <li><a data-pjax href="https://noo8ie.github.io/friends">友链</a></li>
+
+        
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -184,7 +214,7 @@
     <link rel="stylesheet" href="https://noo8ie.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://noo8ie.github.io/styles/main.css">
     
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/dracula.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
@@ -193,6 +223,15 @@
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
     <!-- 数学公式 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+        </script>
     
     
 </head>
@@ -210,17 +249,17 @@
     
     
     <script>
-        let shareChoice = false
+        let shareChoice = true
     </script>
     
     
     <script>
-        let donateChoice = false
+        let donateChoice = true
     </script>
     
     
     <script>
-        let searchChoice = false
+        let searchChoice = true
     </script>
     
     <script>let postsnum = 0;</script>
@@ -276,6 +315,120 @@
             </div>
         </div>
     </div>
+    
+    <div id=side>
+        <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
+                    src='https://noo8ie.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
+        <div class="avatar-border">
+            <img src="https://noo8ie.github.io/images/avatar.png?v=1611723656724" class="avatar">
+        </div>
+        <div class="sitename">Gridea</div>
+        <span class="describtion" data-text='["<论废物的自我修养>"]'>&nbsp;</span>
+        
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
+        </div>
+        
+    <div class="share-button">
+        <span>社交按钮</span>
+        
+        
+        
+        
+        
+        
+    </div>
+    <div id="qq" style="display:none"></div>
+    
+    
+    <div class="mchocie describtion">
+        <a data-pjax href="/" class="menubutton">
+            首页
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a data-pjax href="/archives" class="menubutton">
+            归档
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a data-pjax href="/tags" class="menubutton">
+            标签
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a data-pjax href="/post/about" class="menubutton">
+            关于
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a data-pjax href="https://noo8ie.github.io/talk" class="menubutton">说说</a>
+    </div>
+    
+    
+    <div class="mchocie describtion">
+        <a data-pjax href="https://noo8ie.github.io/friends" class="menubutton">友人帐</a>
+    </div>
+    
+    <hr>
+    <style>
+    .copyright {
+        font-size: 15px;
+        color: #d9d9d9;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        .foot {
+            width: 100%;
+            height: 130px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .foot {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="foot">
+        <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
+                href="https://github.com/850552586/gridea-theme-fog">Fog</a>
+            <div>
+                
+            </div>
+            <div>
+                
+            </div>
+            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+    </div>
+
+
+    <script src="https://noo8ie.github.io/media/js/wordshow.js"></script>
     
     
 </body>
@@ -444,7 +597,7 @@
         let talkindex = 0;
         get();
         function get() {
-            var t = JSON.parse('');
+            var t = JSON.parse('[]');
             talkindex = t.length - 1;
             for (var i = 0; i <= t.length - 1; i++) {
                 var d = {};
@@ -476,7 +629,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://noo8ie.github.io/images/avatar.png?v=1611723383599">\
+                        <img class="intro1" src="https://noo8ie.github.io/images/avatar.png?v=1611723656724">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -489,7 +642,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://noo8ie.github.io/images/avatar.png?v=1611723383599">\
+                        <img class="intro1" src="https://noo8ie.github.io/images/avatar.png?v=1611723656724">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -838,9 +991,17 @@
     </script>
     </div>
                 
-            <div class="col-lg-3"></div>
-            <div id="main" class="col-xs-12 col-sm-12 col-md-12  col-lg-6 posttop">
-                <link rel="stylesheet" href="https://noo8ie.github.io/media/css/font-awesome.css">
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div class="col-md-1 col-lg-3"></div>
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+                    <link rel="stylesheet" href="https://noo8ie.github.io/media/css/font-awesome.css">
 
 <body>
     <div class="allcontent" id="postdetail">
@@ -882,6 +1043,35 @@
             </div>
             <hr style="width: 80%;">
             
+            <div class="sharebtnContainer">
+                <button type="button" class="sharebtn">转载分享</button>
+            </div>
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://noo8ie.github.io/media/images/QQ.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://noo8ie.github.io/media/images/wechat.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://noo8ie.github.io/media/images/weibo.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://noo8ie.github.io/media/images/qzone.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://noo8ie.github.io/media/images/douban.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://noo8ie.github.io/media/images/facebook.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://noo8ie.github.io/media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
+            
+            <div class="donateContainer">
+                <img src="https://noo8ie.github.io/media/images/donate.png" alt="" class="donateImg">
+            </div>
+            <div class="donateContainer">
+                <img src="" alt="" class="donate">
+            </div>
             
             <div class="postfooter">
                 <ul class="post-copyright">
@@ -910,8 +1100,8 @@
     pl = pl.replace(rootaddr, "");
     $("#hotnum").attr('id', pl);
 </script>
-                <div class="toc-container">
-                    <ul class="markdownIt-TOC">
+                    <div class="toc-container">
+                        <ul class="markdownIt-TOC">
 <li>
 <ul>
 <li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
@@ -922,31 +1112,27 @@
 </li>
 </ul>
 
-                </div>
-                <div class="tog">
-                    <div class="toggleContainer">
-                        <div class="toggle">
-                            <i class="fas fa-angle-double-up"></i>
+                    </div>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="comment" class="comment" style="background: white">
+                        <div class="commentcontainer">
+                            
+                            <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                            
                         </div>
                     </div>
                 </div>
-                <div id="comment" class="comment" style="background: white">
-                    <div class="commentcontainer">
-                        
-                        <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
-                        
-                    </div>
-                </div>
-                <div style="margin-top:5vh">
-                    
+                <div class="col-md-1 col-lg-2"></div>
+                <div id="bg">
                 </div>
             </div>
-            <div class="col-md-2 col-lg-3">
-            </div>
-            <div id="bg">
-            </div>
-        </div>
-        
+            
         
     </div>
     
@@ -1062,6 +1248,8 @@
     bg.css("background", "url('" + bgurl + "')");
 </script>
 
+
+<script src="https://noo8ie.github.io/media/js/index.js"></script>
 
 
 
