@@ -126,7 +126,7 @@
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='https://noo8ie.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="https://noo8ie.github.io/images/avatar.png?v=1611929708907" class="avatar">
+            <img src="https://noo8ie.github.io/images/avatar.png?v=1611929848611" class="avatar">
         </div>
         <div class="sitename">Gridea</div>
         <span class="describtion" data-text='["<论废物的自我修养>"]'>&nbsp;</span>
@@ -435,7 +435,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://noo8ie.github.io/images/avatar.png?v=1611929708907">\
+                        <img class="intro1" src="https://noo8ie.github.io/images/avatar.png?v=1611929848611">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -448,7 +448,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://noo8ie.github.io/images/avatar.png?v=1611929708907">\
+                        <img class="intro1" src="https://noo8ie.github.io/images/avatar.png?v=1611929848611">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -948,7 +948,7 @@
         <a data-pjax href="https://noo8ie.github.io/post/escdian-zi-diao-su-qi">
             <div id="post" style="width:100%">
                 
-                <img src="" class="postimage">
+                <img src="/media/images/postdefault.png" class="postimage">
                 
         <div class="posttitlebox">
             <div class="posttitle">
@@ -1033,10 +1033,10 @@
         </div>
         <div id="bg">
         </div>
-        <div id="bgchoice" style="display: none">
+        <div id="bgchoice" style="display: none">default
                     </div>
                     
-                    <div id="bgurl" style="display:none"></div>
+                    <div id="bgurl" style="display:none">\media\images\custom-bgimage.png</div>
                        
             </div>
 </div>
@@ -1052,6 +1052,16 @@
 
 </html>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = document.getElementById("domainname").innerHTML + "/"; //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js"></script>
+<script type="text/javascript" src="https://noo8ie.github.io/media/live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://noo8ie.github.io/media/live2d/assets/tororo.model.json");
+</script>
 
 
 <script>
